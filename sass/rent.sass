@@ -1,0 +1,174 @@
+@import 'responsive'
+
+.rent
+	padding-bottom: 40px
+	+media(sm)
+		padding-bottom: 20px	
+
+	&__title
+		font-size: 48px
+		line-height: 1.2
+		letter-spacing: 0.15px
+		color: #002638
+		padding-bottom: 50px
+		+media(mdx)
+			font-size: 36px
+			padding-bottom: 35px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-bottom: 70px
+		+media(mdx)
+			padding-bottom: 20px
+
+	&__item
+		&--aside
+			width: 442px
+			display: flex
+			+media(mdx)
+				width: 100%
+
+		&--content
+			width: calc(100% - 442px)
+			padding-left: 60px
+			margin-left: auto
+			+media(mdx)
+				width: 100%
+				padding-left: 0px
+				margin: 0px
+
+		.card__details
+			max-width: 670px
+			margin-left: auto
+			+media(mdx)
+				max-width: 100%
+				margin: 0px
+				margin-top: 15px
+
+	&__holder
+		display: flex
+		+media(mdx)
+			display: block
+
+	&__box
+		&:first-child
+			margin-right: 84px
+			+media(mdx)
+				margin-right: 0px
+				padding-bottom: 12px
+		p 
+			font-size: 16px
+			line-height: 1.5
+			color: #002638
+			white-space: pre-wrap
+			padding-bottom: 6px	
+			a
+				color: #002638
+
+		&--contacts
+			p
+				padding-bottom: 3px	
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -11px
+		+media(sm)
+			margin: 0px
+
+	&__col
+		width: calc(100% / 4 )
+		background-color: #f7fafc
+		border-radius: 25px
+		margin-bottom: 10px
+		padding: 40px 15px
+		+media(sm)
+			max-width: 450px
+			margin: 0 auto
+			margin-bottom: 10px	
+		&:first-child
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			+media(sm)
+				padding-left: 15px	
+			.rent__col
+				padding-right: 8px
+			.rent__inner
+				width: 23%
+				+media(sm)
+					width: 100%
+
+			.rent__block
+				width: 77%
+				padding-left: 35px
+				+media(sm)
+					width: 100%
+					padding-left: 0px
+
+			.rent__list
+				columns: auto 138px
+				column-gap: 20px
+				+media(sm)
+					columns: auto
+
+		&:not(:first-child)
+			width: calc(100% / 4 - 22px)
+			margin: 0 11px
+			margin-bottom: 10px
+			+media(mdx)
+				width: calc(100% / 2 - 22px)
+			+media(sm)
+				width: 100%
+				margin: 0 auto
+				margin-bottom: 10px
+
+	&__subtitle,
+	&__heading
+		font-size: 20px
+		line-height: 1.2
+		letter-spacing: 0.15px
+		color: #002638
+		padding-bottom: 15px
+		font-weight: 700
+
+	&__subtitle
+		text-align: center
+
+	&__list
+		li
+			text-align: center
+			&:not(:last-child)	
+				margin-bottom: 10px
+
+	&__elem
+		position: relative
+		font-size: 12px
+		line-height: 1.2
+		color: #002638
+		text-transform: uppercase
+		padding-bottom: 2px
+		font-weight: 700
+		&:after
+			position: absolute
+			content: ' '
+			bottom: 1px
+			left: 0px
+			width: 100%
+			height: 1px
+			background-color: #002638
+
+		&:hover
+			&:after
+				width: 0px
+
+	&__image
+		display: block
+		max-width: 136px
+		margin: 0 auto
+		margin-bottom: 16px
+		img
+			display: block

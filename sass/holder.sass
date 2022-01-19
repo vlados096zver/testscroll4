@@ -1,0 +1,306 @@
+@import 'responsive'
+
+.holder
+	opacity: 0
+	visibility: hidden
+	position: absolute
+	max-width: 905px
+	width: 100%
+	top: calc(100% + 15px)
+	right: 0px
+	z-index: 10
+	+media(sm)
+		display: none	
+
+	&--active
+		opacity: 1
+		visibility: visible
+
+	.things__popup
+		right: 0px
+		+media(mdx)
+			right: -21px
+
+	.things__arrow
+		right: 45px
+
+	&__popup
+		//max-height: calc(80vh - 250px)
+		//overflow: auto
+		//overflow-x: hidden
+
+	&__inner
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		background-color: #e5edf2
+		border: 1px solid #e9e8f4
+		padding: 18px 25px
+		&:after
+			position: absolute
+			content: ' '
+			top: -14px
+			right: 94px
+			width: 36px
+			height: 18px
+			background-image: url(../img/icons/decor/popup-pic.svg)
+			background-size: 36px 18px
+			+media(lgm)
+				right: 66px
+
+	&__title
+		font-size: 18px
+		line-height: 1.35
+		color: #231f20
+		font-weight: 700
+
+	&__close
+		cursor: pointer
+		position: relative
+		display: block
+		width: 30px
+		height: 30px
+		border: none
+		outline: none
+		border-radius: 4px
+		padding: 0px
+		background-color: #002638
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 30px
+			height: 30px
+			background-image: url(../img/icons/decor/close-katalog.svg)
+			background-size: 30px
+			background-repeat: no-repeat
+			background-position: center
+
+	&__content
+		background-color: #f7fafc
+		padding: 0 25px
+
+	&__subtitle
+		font-size: 24px
+		line-height: 1.2
+		color: #3453f3
+		padding-top: 26px
+		padding-bottom: 15px
+		font-weight: 700
+
+	&-card
+		&__wrap
+			padding-bottom: 32px
+
+		&__item
+			display: block
+			position: relative
+			background-color: #ffffff
+			border: 1px solid #e9e8f4
+			border-radius: 25px
+			padding: 15px
+			padding-top: 25px
+			margin-bottom: 0px
+			&:not(:last-child)
+				margin-bottom: 18px
+
+		&__image
+			display: block
+			width: 112px
+			position: relative
+			.rcatalog__elem
+				position: absolute
+				left: 50%
+				bottom: 0px
+				transform: translateX(-50%)
+
+		&__pic
+			display: block	
+
+		&__block
+			width: calc(100% - 112px)
+			padding-left: 20px
+
+		&__box
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+
+		&__title
+			max-width: 240px
+			width: 100%
+			font-size: 18px
+			line-height: 1.2
+			color: #002638
+			margin-bottom: 18px
+			font-weight: 700
+			a
+				color: inherit
+
+		&__elem
+			font-size: 14px
+			line-height: 1.2
+			color: #79778a
+			padding-bottom: 8px
+
+		&__hight,
+		&__date
+			font-size: 14px
+			line-height: 1.2
+			color: #002638
+			font-weight: 500
+
+		&__row
+			display: flex
+
+		&__col
+			&:not(:last-child)
+				margin-right: 30px
+
+		&__add
+			padding-top: 12px
+			border-top: 1px solid #e9e8f4
+
+		&__inner
+			font-size: 16px
+			line-height: 1.2
+			color: #79778a
+			padding-bottom: 10px
+			font-weight: normal
+
+		&__group
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			padding-bottom: 8px	
+
+		&__column
+			display: flex
+			align-items: center
+			margin-bottom: 14px
+			&:not(:last-child)
+				margin-right: 25px
+
+		&__change
+			font-size: 16px
+			line-height: 1.2
+			color: #002638
+			text-transform: uppercase
+			padding-right: 16px
+			font-weight: 500
+
+		&__control
+			font-size: 14px
+			line-height: 1.2
+			color: #79778a
+			span
+				color: #002638
+				padding-left: 8px
+				font-weight: 500
+
+		&__info
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			background-color: #ebf2f7
+			border-radius: 25px
+			padding: 25px 30px	
+			padding-bottom: 0px	
+
+		&__bl
+			display: flex	
+			align-items: center
+			padding-bottom: 25px
+			&:not(:last-child)
+				margin-right: 25px	
+
+		&__text
+			font-size: 16px
+			line-height: 1.2
+			color: #79778a
+
+		&__count
+			font-size: 20px
+			line-height: 1.2	
+			color: #002638
+			padding-left: 20px	
+			font-weight: 700	
+			span
+				font-size: 24px
+				padding-right: 8px	
+
+	&-buy
+		background-color: #ffffff
+		border-radius: 0 0 40px 40px
+		padding: 0 25px
+		&__wrap
+			padding-bottom: 32px
+
+		&__box
+			display: flex
+			align-items: center
+			justify-content: space-between
+			border-bottom: 1px solid #e9e8f4
+
+		&__title
+			font-size: 16px	
+			line-height: 1.2	
+			color: #002638
+			padding-bottom: 15px	
+			font-weight: 700	
+
+		&__count
+			font-size: 20px	
+			line-height: 1.2	
+			color: #3453f3	
+			padding-bottom: 15px	
+			font-weight: 700
+			span
+				font-size: 24px	
+				padding-right: 5px	
+
+		&__wrap-btn
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-top: 25px
+
+		&__btn
+			display: block
+			max-width: 204px
+			width: 100%
+			font-size: 12px
+			line-height: 1.2
+			background-color: #f7fafc
+			outline: none
+			border: 1px solid #3453f3
+			border-radius: 15px
+			text-align: center
+			text-transform: uppercase
+			padding: 26px 5px
+			padding-bottom: 23px
+			margin-bottom: 24px
+			font-weight: 700
+			font-family: TTNorms
+			&:not(:last-child)
+				margin-right: 38px
+
+			&:hover
+				transition: 0.25s background-color, 0.25s color
+
+			&--basket
+				color: #3453f3
+				background-color: transparent
+				&:hover
+					background-color: #3453f3
+					color: #ffffff
+
+			&--order
+				color: #fff
+				background-color: #3453f3
+				&:hover
+					background-color: transparent
+					color: #3453f3

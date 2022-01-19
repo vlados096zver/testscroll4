@@ -1,0 +1,802 @@
+@import 'responsive'
+
+.swiper-card
+	height: 400px
+	padding: 0 15px
+	+media(mdx)
+		height: initial
+
+	.swiper-slide
+		cursor: pointer
+		position: relative
+		&:after	
+			position: absolute
+			content: ' '
+			top: 50%
+			transform: translateY(-50%)
+			left: -14px
+			width: 4px
+			height: 24px
+			background-color: #3453f3
+			border-radius: 10px
+			opacity: 0
+			visibility: visible
+			transition: 0.1s opacity, 0.25s visibility
+			+media(mdx)
+				top: initial
+				transform: translateX(-50%)
+				bottom: 0px
+				left: 50%
+				width: 24px
+				height: 4px
+
+		&.swiper-slide-thumb-active
+			&:after
+				opacity: 1
+				visibility: visible
+				
+ 
+	.swiper-scrollbar
+		right: 0px
+		width: 3px
+		height: 100%
+		background-color: #f1f0fc
+		+media(mdx)
+			bottom: initial
+			top: 0px
+			width: calc(100% - 30px)
+			left: 15px
+			right: 15px
+			height: 3px	
+
+		.swiper-scrollbar-drag
+			background-color: rgba(0, 38, 56, 0.4)
+			transition: 0.25s background-color
+
+	&:hover
+		.swiper-scrollbar-drag
+			background-color: rgba(0, 38, 56, 1)
+
+.card
+	&--without_photo
+		.card__gallery
+			+media(mdx)
+				padding-bottom: 0px
+
+	&--rent
+		.card__grid
+			+media(mdx)
+				padding-top: 0px
+
+			.rcatalog__elem
+				position: absolute
+				top: 16px
+				right: 16px
+				+media(mdx)
+					right: 0px
+					top: -12px
+
+	&__wrap-slider
+		height: 51px
+		display: flex	
+		background-color: #f7fafc
+		border: 1px solid #e9e8f4
+		border-radius: 13px
+		padding: 0px 10px
+		margin-bottom: 22px	
+
+	&__slider
+		.swiper-slide
+			width: auto
+
+		.swiper-scrollbar
+			bottom: 3px
+			left: 12px
+			right: 12px
+			width: calc(100% - 24px)
+			height: 2px
+			background-color: #e4e8ee
+
+			.swiper-scrollbar-drag
+				background-color: #002638
+
+	&__list
+		display: flex	
+		justify-content: center
+		li:not(:last-child)
+			margin-right: 35px	
+
+	&__box
+		display: block	
+		cursor: pointer
+		font-size: 12px	
+		line-height: 1.2	
+		color: #262832
+		border-radius: 13px
+		text-transform: uppercase
+		padding: 18px 0
+		font-weight: 700	
+
+		&--active
+			color: #3453f3
+
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		margin-bottom: 26px	
+		+media(mdx)
+			margin-bottom: 0px	
+
+	&__item
+		&--aside
+			width: 42.5%
+			padding-right: 25px	
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+
+		&--content
+			width: 57.5%
+			position: relative
+			border: 1px solid #e9e8f4
+			border-radius: 25px
+			padding: 12px 24px
+			padding-bottom: 28px
+			+media(mdx)
+				width: 100%
+				display: flex
+				flex-direction: column
+				border: none
+				padding: 0px
+				padding-bottom: 28px
+
+	&__wrapper
+		min-height: 430px
+		display: flex
+		flex-wrap: wrap
+		border: 1px solid #e9e8f4
+		border-radius: 25px
+		
+		+media(mdx)
+			padding-top: 0px
+			border: none
+
+	&__gallery
+		width: 94px
+		position: relative
+		padding: 17px 0
+		+media(mdx)
+			width: 100%
+			padding-top: 0px	
+			padding-bottom: 40px	
+
+		.swiper-wrapper
+			align-items: center
+
+		.swiper-slide
+			+media(mdx)
+				padding-bottom: 10px	
+				margin: 0px	
+				margin-top: 10px	
+
+			img
+				display: block
+				//max-width: 55px
+				margin: 0 auto
+				+media(mdx)
+					//max-width: 100px
+				+media(smx)
+					//max-width: 55px
+
+		.swiper-button-prev,
+		.swiper-button-next
+			left: 50%
+			transform: translateX(-50%)
+			cursor: pointer
+			background-image: url(../img/icons/decor/btn-arrow.svg)
+			background-size: 24px
+			background-repeat: no-repeat
+			background-position: center
+			width: 24px
+			height: 24px
+			background-color: #79778a
+			border: none
+			border-radius: 50%
+			outline: none
+			padding: 0px	
+			transition: 0.25s background-color
+			&:after
+				display: none
+			+media(mdx)
+				display: none	
+
+
+			&:hover
+				background-color: #4e4d59
+
+
+			&.swiper-button-disabled
+				opacity: 0
+
+		.swiper-button-prev
+			top: 12px
+			bottom: initial
+			transform: translateX(-50%) scale(-1) 
+
+		.swiper-button-next
+			top: initial
+			bottom: -12px
+
+			//&:disabled
+				//opacity: 1
+
+	&__grid
+		width: calc(100% - 94px)
+		position: relative
+		padding: 0 12px
+		//padding-left: 18px
+		//padding-right: 12px
+		+media(mdx)
+			order: -2
+			width: 100%
+			padding: 0px
+			padding-top: 60px	
+
+		.product__info
+			position: static
+
+		.product__delivery
+			top: 58px
+			right: 12px
+			+media(mdx)
+				right: initial
+				left: 0px
+				top: 48px
+
+	&__user
+		position: absolute
+		top: 11px
+		left: 12px
+		right: 12px
+		z-index: 3
+		width: calc(100% - 24px)
+		display: flex	
+		align-items: center
+		justify-content: space-between
+		+media(mdx)
+			left: 0px
+			right: 0px
+			width: 100%
+			margin-bottom: 30px	
+
+	&__single
+		height: 100%	
+		display: flex
+		align-items: center
+		max-width: 362px
+		margin: 0 auto
+		+media(mdx)
+			margin-bottom: 25px
+		img
+			display: block
+			max-width: 100%
+			margin: 0 auto
+
+
+	&__company
+		display: block	
+		max-width: 89px
+		width: 100%	
+		img
+			display: block	
+
+	&__inner
+		display: flex	
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+
+	&__desc
+		font-size: 16px	
+		line-height: 1.2	
+		color: #31bb01
+		margin-bottom: 15px	
+		font-weight: 500	
+		a
+			color: #31bb01
+			border-bottom: 1px dashed #31bb01
+			transition: 0.25s border
+		&:hover a
+			border-bottom-color: transparent
+		&--desktop
+			padding-right: 20px
+			+media(mdx)
+				display: none	
+
+		&--mobile
+			display: none	
+			+media(mdx)
+				display: block	
+				margin-bottom: 40px
+
+	&__article
+		font-size: 12px	
+		line-height: 1.2	
+		color: #79778a
+		text-transform: uppercase
+		margin-bottom: 15px	
+		&--desktop
+			+media(mdx)
+				display: none	
+
+		&--mobile
+			display: none	
+			+media(mdx)
+				display: block
+				position: absolute
+				z-index: 3
+				top: 50px
+				right: 0px
+	&__info
+		font-size: 24px	
+		line-height: 1.2	
+		color: #002638
+		margin-bottom: 40px	
+		font-weight: 700	
+		&--desktop
+			+media(mdx)
+				display: none	
+
+		&--mobile
+			display: none	
+			+media(mdx)
+				display: block	
+				margin-bottom: 20px	
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		padding-bottom: 25px
+		+media(mdx)
+			order: -3
+			padding-bottom: 20px	
+
+	&__col
+		display: block
+		width: 55px
+		height: 55px
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 5px
+		margin-bottom: 10px	
+		img
+			display: block
+			width: auto
+			height: 100%
+			margin: 0 auto
+		&:not(:last-child)
+			margin-right: 12px
+
+		&--active
+			border-color: #3453f3
+
+		&--disabled
+			position: relative
+			&::after,
+			&::before
+				position: absolute
+				content: ' '
+				z-index: 3
+				top: 50%
+				width: calc(100% + 12px)
+				height: 2px
+				background-color: #e9e8f4
+
+			&::after
+				transform: rotate(-50deg) translateY(-50%)
+				left: -5px
+
+			&::before
+				transform: rotate(50deg) translateY(-50%)
+				right: -5px
+
+			img
+				opacity: 0.5
+
+		&:hover:not(.card__col--disabled)
+			border-color: #2339a6
+			transition: 0.25s border
+
+	&__holder
+		display: flex
+		flex-wrap: wrap
+		padding-bottom: 15px	
+		+media(mdx)
+			order: -1
+			padding-bottom: 36px	
+
+	&__change
+		display: block
+		margin-bottom: 10px
+		&:not(:last-child)
+			margin-right: 12px	
+
+	&__input
+		display: none	
+		&:checked 
+			&+ label span
+				border-color: #3453f3
+
+		&:disabled 
+			&+ label 
+				span
+					color: rgba(0, 38, 56, 0.2)
+					&:after,
+					&:before
+						opacity: 1
+						visibility: visible
+
+	&__label
+		display: block
+		cursor: pointer
+		position: relative
+		font-size: 16px	
+		line-height: 1.2	
+		color: #002638
+		letter-spacing: 0.15px
+		text-transform: uppercase
+		span
+			display: block	
+			position: relative
+			border-radius: 18px
+			overflow: hidden
+			padding: 4px 15px
+			border: 1px solid #e9e8f4
+			&::after,
+			&::before
+				position: absolute
+				content: ' '
+				top: 50%
+				width: 100%
+				height: 2px
+				background-color: #e9e8f4
+				opacity: 0
+				visibility: hidden
+
+			&::after
+				transform: rotate(-20deg) translateY(-50%)
+				left: 0px
+
+			&::before
+				transform: rotate(20deg) translateY(-50%)
+				right: 0px
+		&:hover
+			&:not(.card__label--disabled) span
+				background-color: #e9e8f4
+				transition: 0.25s background-color
+
+	&__size
+		display: inline-block
+		cursor: pointer
+		position: relative
+		font-size: 14px	
+		line-height: 1.2	
+		color: #3453f3
+		background-color: #fff
+		border: none
+		outline: none
+		padding: 4px 0
+		padding-left: 33px
+		margin-bottom: 25px
+		font-family: TTNorms	
+		font-weight: normal
+		+media(mdx)
+			order: -2
+			margin-bottom: 20px
+		span
+			border-bottom: 1px dashed #3453f3
+			
+		&:hover span
+			border-bottom-color: transparent
+			transition: 0.25s border
+
+		&:after
+			position: absolute
+			content: ' '
+			left: 0px
+			top: 50%
+			transform: translateY(-50%)
+			width: 24px	
+			height: 24px	
+			background-color: #3453f3
+			border-radius: 6px
+			background-image: url(../img/icons/decor/size.svg)
+			background-repeat: no-repeat
+			background-size: 13px 14px
+			background-position: center
+
+	&__old
+		font-size: 16px	
+		line-height: 1.2	
+		color: #79778a
+		text-decoration: line-through
+		span
+			font-size: 18px	
+
+	&__new
+		font-size: 20px	
+		line-height: 1.2
+		color: #ff002e
+		margin-bottom: 12px	
+		font-weight: 700
+		span
+			font-size: 24px	
+
+	&__wrap-btn
+		display: flex	
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 20px	
+		+media(sm)
+			padding-bottom: 5px
+
+	&__btn
+		cursor: pointer
+		display: flex	
+		width: 100%	
+		min-height: 62px	
+		font-size: 16px	
+		line-height: 1.2	
+		letter-spacing: 0.15px
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 20px 5px
+		padding-left: 24px	
+		margin-bottom: 20px	
+		font-style: normal
+		font-family: TTNorms
+		transition: 0.25s background-color, 0.25s border, 0.25s color
+		+media(mdx)
+			margin-bottom: 28px	
+		&:not(:last-child)
+			margin-right: 8px
+		svg
+			display: block
+			margin-left: 7px	
+
+		&--buy
+			max-width: 148px	
+			min-width: 148px
+			color: #fff
+			background-color: #3453f3
+			padding-left: 34px	
+			svg
+				width: 18px	
+				height: 18px	
+				fill: #fff
+
+			&:hover
+				background-color: #253db3
+
+		&--favorites
+			max-width: 148px	
+			min-width: 148px
+			color: #002638
+			background-color: transparent
+			svg
+				width: 20px	
+				height: 18px	
+				fill: transparent
+				stroke: #3453f3
+				stroke-width: 2px
+				transition: 0.25s fill
+
+			&:hover
+				background-color: #e9e8f4
+
+		&--available
+			max-width: 250px
+			font-size: 15px	
+			color: #eb7f00
+			background-color: #fff
+			border-color: #eb7f00
+			padding-left: 20px	
+			background-image: url(../img/icons/decor/notification.svg)
+			background-repeat: no-repeat
+			background-size: 17px 20px
+			background-position: right 26px center
+			span
+				font-size: 15px	
+			&:hover
+				background-color: #e9e8f4
+
+		&--order
+			svg
+				width: 16px
+				height: 18px	
+
+		&--active
+			svg
+				fill: #3453f3
+
+	&__data
+		padding-bottom: 18px
+
+	&__elem
+		display: flex	
+		align-items: center
+		justify-content: space-between
+		padding-top: 10px	
+		+media(mdx)
+			display: block	
+		&:not(:last-child)
+			border-bottom: 1px dashed #e9e8f4
+
+	&__subtitle
+		color: #79778a
+		padding-right: 25px	
+
+	&__content
+		max-width: 195px	
+		color: #000000
+		text-align: right	
+		+media(mdx)
+			text-align: left
+
+	&__title
+		font-size: 18px	
+		line-height: 1.2	
+		letter-spacing: 0.15px
+		color: #000000
+		margin-bottom: 13px	
+		font-weight: 700	
+
+	&__text
+		position: relative
+		overflow: hidden
+		max-height: 298px
+		will-change: max-height
+		transition: 0.5s max-height ease
+		&--gradient
+			&:after
+				position: absolute
+				content: ' '
+				bottom: 0px
+				left: 0px
+				width: 100%
+				height: 41px
+				background: linear-gradient(rgba(255, 255, 255, 0), #ffffff)
+
+	&__block
+		position: relative
+
+	&__details
+		padding-bottom: 15px
+
+	&__details,
+	&__text
+		h1, h2, h3, h4, h5, h6
+			line-height: 1.2
+			color: #000000
+			padding-bottom: 15px	
+			font-weight: 700
+
+		h1
+			font-size: 24px
+
+		h2
+			font-size: 20px
+
+		h3
+			font-size: 16px
+
+		h4, h5, h6
+			font-size: 14px	
+
+		ol
+			list-style-type: none
+			padding: 0px	
+			margin: 0px	
+			margin-bottom: 25px	
+			li
+				counter-increment: listCounter
+				font-size: 14px	
+				line-height: 1.64	
+				color: #000
+				&:before
+					content: counter(listCounter) ') '
+				&:not(:last-child)
+					padding-bottom: 3px
+
+		ul
+			padding-bottom: 8px	
+
+			li
+				position: relative
+				font-size: 14px
+				line-height: 1.64	
+				color: #000000
+				padding-left: 17px	
+				margin-bottom: 8px	
+				font-weight: 500	
+				&:after
+					position: absolute
+					content: ' '
+					top: 7px
+					left: 0px
+					width: 8px	
+					height: 8px	
+					background-color: #3453f3
+					border-radius: 50%
+
+		p
+			font-size: 14px
+			line-height: 1.64
+			color: #002638
+			&:not(:last-child)
+				padding-bottom: 1.5em
+
+	&__more
+		//position: absolute
+		position: static
+		display: none	
+		width: max-content
+		bottom: 25px
+		cursor: pointer
+		font-size: 13px	
+		line-height: 1.2	
+		color: #002638
+		background-color: transparent
+		border: none
+		border-bottom: 1px dashed #002638
+		outline: none
+		padding: 0px	
+		text-align: left
+		margin-top: 8px
+		font-family: TTNorms
+		transition: 0.25s border
+		&:hover
+			border-bottom-color: transparent
+
+		&--active
+			display: block
+
+	&__subtitle,
+	&__content
+		font-size: 14px	
+		line-height: 1.25	
+		margin-bottom: 10px	
+
+	&__content
+		a
+			color: #3453f3
+			border-bottom: 1px dashed #e9e8f4
+			font-weight: 500	
+			transition: 0.25s border
+			&:hover
+				border-bottom-color: transparent
+
+	&__status
+		font-size: 16px
+		line-height: 1.2
+		color: #3453f3
+		margin-bottom: 15px
+		&--desktop
+			+media(mdx)
+				display: none	
+
+		&--mobile
+			display: none
+			+media(mdx)
+				display: block	
+
+	&__single
+		&--available
+			img
+				opacity: 0.5
+
+	&__price
+		&--available
+			.card__old,
+			.card__new
+				color: #d9d8e2

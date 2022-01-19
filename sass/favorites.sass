@@ -1,0 +1,123 @@
+@import 'responsive'
+
+.favorites
+	position: relative
+	z-index: 2
+	padding-bottom: 112px
+	+media(mdx)
+		padding-bottom: 45px		
+	+media(sm)
+		padding-bottom: 12px	
+
+	.select__wrap
+		display: none	
+		max-width: 148px
+		width: 100%
+		+media(sm)
+			display: block	
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		font-weight: 700
+		padding-bottom: 30px
+		+media(sm)
+			padding-bottom: 20px
+
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-bottom: 5px
+		+media(sm)
+			padding-bottom: 15px
+
+	&__filter
+		display: none
+		max-width: 148px
+		width: 100%
+		+media(sm)
+			display: block	
+
+	&__block
+		display: flex
+		align-items: center
+		margin-bottom: 24px
+
+	&__holder
+		margin-right: 30px
+
+	&__wrap-clear
+		position: relative
+		.things__popup
+			min-width: 264px
+			right: initial
+			left: 0px
+			top: 45px
+			+media(sm)
+				right: 0px
+				left: initial
+
+		.things__arrow
+			right: initial
+			left: 70px
+			+media(sm)
+				left: calc(100% - 70px)
+			
+	&__clear
+		cursor: pointer
+		position: relative
+		display: flex
+		align-items: center
+		background-color: transparent
+		border: none
+		outline: none
+		margin-bottom: 24px	
+		font-weight: 500
+		font-family: TTNorms
+		+media(sm)
+			margin-bottom: 0px
+		svg
+			display: block	
+			width: 19px
+			height: 20px
+			fill: #79778a
+			margin-right: 8px
+			
+		span
+			font-size: 14px
+			line-height: 1.2
+			color: #002638
+		&:hover	
+			svg
+				fill: #ff002e
+				transition: 0.25s fill
+			span
+				color: #ff002e
+				transition: 0.25s color
+
+	&__del
+		cursor: pointer
+		display: block
+		width: 19px
+		height: 20px
+		background-color: transparent
+		border: none
+		outline: none
+		padding: 0px
+		margin-bottom: 35px
+		svg	
+			display: block
+			fill: #79778a
+		&:hover
+			svg
+				fill: #ff002e
+				transition: 0.25s fill
+
+	&__empty
+		font-size: 16px
+		line-height: 1.2
+		text-align: center
+		padding: 20px 0
+		font-weight: 500

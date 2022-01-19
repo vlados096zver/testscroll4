@@ -1,0 +1,145 @@
+@import 'responsive'
+
+.check
+	&__item
+		display: flex	
+		align-items: flex-start
+		justify-content: space-between
+		margin-bottom: 14px
+
+	&__label
+		display: flex
+		justify-content: space-between
+		width: 100%
+		cursor: pointer
+		font-size: 14px
+		line-height: 1.2
+		color: #002638
+		position: relative
+		padding-left: 27px	
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+		&:after
+			top: 0px
+			left: 0px
+			width: 17px	
+			height: 17px
+			background-color: #fff
+			border: 1px solid #E9E8F4
+			border-radius: 3px
+
+		&:before
+			z-index: 3
+			top: 0px
+			left: 0px
+			width: 17px	
+			height: 17px
+			background-image: url(../img/icons/decor/check.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 9px 7px
+			filter: invert(92%) sepia(51%) saturate(0%) hue-rotate(211deg) brightness(109%) contrast(101%)
+
+	&__input
+		display: none	
+		&:checked + .check__label
+			&:after
+				background-color: #3453f3
+
+		&:disabled
+			& + .check__label
+				color: #7b909a
+				text-decoration: line-through
+				.check__count
+					color: #7b909a
+
+	&__value
+		padding-right: 16px
+
+	&__count
+		display: inline-block
+		align-self: flex-start
+		font-size: 13px	
+		line-height: 1.2	
+		color: #262832
+		background-color: #e4e9ec
+		border-radius: 5px
+		padding: 2px 8px
+
+	&__holder
+		display: flex	
+		flex-wrap: wrap
+		align-items: center
+		margin: 0 -6px
+
+	&__box
+		width: 55px	
+		margin: 0 6px
+		margin-bottom: 12px	
+		&--black
+			.check__type:before
+				filter: none
+
+	&__elem
+		display: none	
+		&:checked 
+			&+ .check__type:before
+				opacity: 1
+				visibility: visible
+
+		&:disabled
+			&+ .check__type
+				color: #7b909a
+				text-decoration: line-through
+
+			&+ .check__type:before
+				opacity: 1
+				visibility: visible
+				top: 0px
+				width: 55px	
+				height: 55px	
+				background-image: url(../img/icons/decor/line.svg)
+				background-size: 55px
+				filter: none
+	
+				
+	&__type
+		position: relative
+		cursor: pointer
+		display: block	
+		font-size: 12px	
+		line-height: 1.2	
+		color: #002638
+		text-align: center
+		padding-top: 60px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+
+		&:after
+			top: 0px
+			left: 0px
+			width: 55px	
+			height: 55px	
+			background-color: var(--bg)
+			border-radius: 8px
+			border: 1px solid #e9e8f4
+
+		&:before
+			z-index: 3
+			opacity: 0
+			visibility: hidden
+			top: 17px
+			left: 50%
+			transform: translateX(-50%)
+			width: 17px
+			height: 17px
+			border-radius: 3px
+			background-image: url(../img/icons/decor/check.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 9px 7px
+			filter: invert(92%) sepia(51%) saturate(0%) hue-rotate(211deg) brightness(109%) contrast(101%)

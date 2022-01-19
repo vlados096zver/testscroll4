@@ -1,0 +1,85 @@
+@import 'responsive'
+
+#popup--change
+	.size__holder
+		max-width: 565px
+
+.size
+
+	&__holder
+		max-width: 885px
+		width: 100%
+		background-color: #fff
+		border-radius: 17px
+		padding-top: 21px
+		padding-bottom: 50px
+		+media(sm)
+			padding: 21px 0px
+		.catalog__btn-mob
+			margin-bottom: 0px
+
+	&__wrapper
+		max-height: 80vh
+		overflow: auto
+		overflow-x: hidden
+		padding: 0 45px
+		+media(sm)
+			padding: 0px
+
+	&__wrap-elem
+		+media(sm)
+			margin-right: 15px	
+
+	&__title
+		font-size: 18px
+		line-height: 1.2
+		color: #262832
+		text-align: center
+		padding-bottom: 14px
+		font-weight: 700
+
+	&__block
+		overflow: hidden
+		border: 1px solid #e4e8ee
+		border-radius: 17px
+		+media(sm)
+			border-radius: 0 0 17px 17px
+
+		table
+			width: 100%
+			table-layout: fixed
+			th, td
+				font-size: 13px
+				line-height: 1.2
+				color: #262832
+				padding: 10px 5px
+				text-align: center
+				word-break: break-all
+
+			th
+				text-transform: uppercase
+				font-weight: 700
+
+			tbody
+				tr
+					&:not(:last-child)
+						border-bottom: 1px solid #e4e8ee
+
+					&:nth-child(even)
+						background-color: #f9f9f9
+
+			thead, tbody
+				tr
+					th, td
+						&:not(:last-child)
+							border-right: 1px solid #e4e8ee
+
+			thead
+				tr
+					th
+						border-bottom: 1px solid #e4e8ee
+
+			tbody	
+				tr:not(:last-child)
+					td
+						border-bottom: 1px solid #e4e8ee	

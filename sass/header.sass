@@ -1,0 +1,37 @@
+@import 'responsive'
+
+.header
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #e9e8f4
+		padding-top: 31px
+		padding-bottom: 21px
+		+media(xxs)
+			flex-direction: column
+
+	&__logo
+		display: block	
+		max-width: 224px
+		width: 100%	
+		+media(xxs)
+			margin-bottom: 20px
+		img
+			display: block	
+			width: 100%	
+
+	&__phone
+		display: flex
+		align-items: center
+		svg
+			display: block
+			width: 20px
+			height: 20px
+			fill: #002638
+			margin-right: 9px
+		span
+			font-size: 14px
+			line-height: 1.2
+			letter-spacing: 0.15px
+			color: #002638

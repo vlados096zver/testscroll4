@@ -1,0 +1,129 @@
+@import 'responsive'
+
+
+.availability
+	&__wrap
+		max-width: 505px
+		width: 100%
+		background-color: #fff
+		border-radius: 25px
+		padding: 42px 30px
+		padding-top: 18px
+		padding-right: 0px
+		+media(sm)
+			padding-bottom: 46px
+
+	&__inner
+		max-height: 80vh
+		overflow: auto
+		overflow-x: hidden
+		padding-right: 30px
+		.catalog__btn-mob
+			margin-bottom: 0px
+			+media(sm)
+				margin-bottom: 16px
+
+	&__block
+		padding-top: 24px
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		padding-bottom: 24px
+		margin-top: -10px
+		font-weight: 700
+		+media(xs)	
+			font-size: 20px
+
+	&__input
+		display: block
+		width: 100%
+		font-size: 15px
+		line-height: 1.2
+		color: #79778a
+		border: 1px solid #E9E8F4
+		border-radius: 15px
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		padding: 23px 15px
+		margin-bottom: 18px
+		&::placeholder
+			font-size: 15px
+			line-height: 1.2
+		&.error
+			font-size: 15px
+
+	&__text
+		font-size: 14px
+		line-height: 1.2
+		color: #002638
+		margin-bottom: 25px
+
+	&__btn
+		cursor: pointer
+		display: block
+		max-width: 208px
+		width: 100%
+		font-size: 12px
+		line-height: 1.2
+		color: #fff
+		background: #3453F3
+		border: none
+		outline: none
+		padding: 26px 10px
+		border-radius: 15px
+		text-transform: uppercase
+		font-weight: 700
+		font-family: TTNorms
+
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__desc
+		max-width: 290px
+		width: calc(100% - 40px)
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		padding-right: 20px
+		font-weight: 700
+		+media(sm)
+			font-size: 22px
+		+media(xs)
+			font-size: 19px
+
+	&__close
+		position: relative
+		cursor: pointer
+		display: block
+		width: 40px
+		height: 40px
+		background-color: #ecedef
+		border: none
+		border-radius: 100%
+		outline: none
+		padding: 0px
+		&:after
+			position: absolute
+			content: ' '
+			z-index: 2
+			top: 50%
+			left: 50%
+			width: 12px
+			height: 12px
+			transform: translate(-50%, -50%)
+			mask: url(../img/icons/decor/block-close.svg)
+			-webkit-mask: url(../img/icons/decor/block-close.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 12px 12px
+			background-color: #79778a
+
+	&__elem
+		display: block
+		width: 40px
+		height: 40px

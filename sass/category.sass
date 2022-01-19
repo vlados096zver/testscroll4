@@ -1,0 +1,40 @@
+@import 'responsive'
+
+.category
+
+	&__block
+		background-color: #fff
+		border: 1px solid #E9E8F4
+		border-radius: 15px
+		padding: 24px 26px
+		margin-bottom: 12px
+
+	&__title
+		background-image: url(../img/icons/decor/cat.svg)
+		background-size: 19px
+		background-repeat: no-repeat
+		background-position: left top 2px 
+		font-size: 18px
+		line-height: 1.2
+		color: #002638
+		padding-left: 30px
+		padding-bottom: 20px
+		border-bottom: 1px solid #e9e8f4
+		margin-bottom: 18px
+		font-weight: 700
+
+	&__list
+		li:not(:last-child)
+			margin-bottom: 12px
+
+	&__link
+		font-size: 15px
+		line-height: 1.2
+		color: #002638
+		font-weight: 500
+		&:hover
+			color: #3453f3
+			transition: 0.25s color
+
+		&--active
+			color: #3453f3

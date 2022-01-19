@@ -1,0 +1,55 @@
+@import 'responsive'
+
+.map
+	margin-bottom: 32px
+	+media(sm)
+		margin-bottom: 8px	
+	&__wrap
+		iframe
+			//display: block
+			//width: 100%
+			//height: 575px
+			//max-height: 80vh
+			//border: 1px solid #e9e8f4
+			//border-radius: 20px
+
+	&__title
+		position: relative
+		z-index: 5
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		//background-color: #615d8d
+
+#map
+	display: block
+	width: 100%
+	height: 0px
+	max-height: 80vh
+	border: 1px solid #e9e8f4
+	border-radius: 20px
+	border-radius: 20px
+	&.active
+		height: 575px
+
+	.gm-style .gm-style-iw-c
+		display: flex
+		align-items: center
+		padding: 0px
+		background-color: #615d8d
+		border-radius: 17px
+		padding: 10px
+		min-height: 82px
+		max-width: 260px !important
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			left: 0px
+			width: 100%
+			height: 100%
+			background-color: #615d8d
+
+	.gm-style .gm-style-iw-t::after
+		background: #615d8d
+

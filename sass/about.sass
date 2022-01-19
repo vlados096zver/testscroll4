@@ -1,0 +1,183 @@
+@import 'responsive'
+
+.about
+	overflow: hidden
+	padding-top: 56px
+	padding-bottom: 120px
+	+media(mdx)
+		padding-top: 30px
+		padding-bottom: 20px
+	+media(sm)
+		padding-top: 10px	
+
+	&__wrap
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 165px
+		+media(lgs)
+			margin-bottom: 80px
+		+media(mdx)
+			margin-bottom: 35px
+		&--right
+			.about__item--text
+				order: -1
+				padding-right: 20px
+				+media(mdx)
+					order: 2
+
+			.about__item--pic
+				padding-left: 0px
+				&:after
+					right: 25%
+					transform: rotate(165deg)
+
+			.about__image img
+				margin-left: auto
+				+media(mdx)
+					margin: 0px auto
+	&__item
+		width: 50%
+		+media(mdx)
+			width: 100%
+		&--pic
+			position: relative
+			+media(mdx)
+				margin-bottom: 35px
+			&:after
+				position: absolute
+				content: ' '
+				z-index: -1
+				bottom: -50px
+				right: 7%
+				width: 443px
+				height: 443px
+				background: linear-gradient(180deg, #E9F0F4 0%, rgba(233, 240, 244, 0) 100%)
+				border-radius: 20px
+				transform: rotate(-165deg)
+				+media(lgs)
+					display: none
+
+		&:not(:first-child)
+			padding-left: 20px
+			+media(mdx)
+				padding-left: 0px
+
+		&--text
+			h1, h2, h3, h4, h5, h6
+				line-height: 1.2
+				color: #000000
+				padding-bottom: 20px	
+				font-weight: 700
+
+			h1
+				font-size: 30px
+				+media(mdx)
+					font-size: 26px
+				+media(sm)
+					font-size: 24px
+
+			h2
+				font-size: 28px
+				+media(mdx)
+					font-size: 24px
+				+media(sm)
+					font-size: 22px
+
+			h3
+				font-size: 26px
+				+media(mdx)
+					font-size: 22px
+				+media(sm)
+					font-size: 20px
+
+			h4, h5, h6
+				font-size: 24px		
+				+media(mdx)
+					font-size: 20px
+				+media(sm)
+					font-size: 18px
+
+			p
+				font-size: 16px
+				line-height: 1.65
+				color: #000000
+				+media(mdx)
+					font-size: 15px
+				+media(sm)
+					font-size: 14px
+				&:not(:last-child)
+					padding-bottom: 1.5em
+					+media(mdx)
+						padding-bottom: 1.2em
+
+	&__image
+		display: block
+		img
+			display: block
+			width: 100%
+			max-width: 542px
+			border-radius: 25px
+			+media(mdx)
+				margin: 0 auto
+
+	&__gallery
+		position: relative
+		flex-basis: 100%
+		padding-bottom: 600px
+		+media(lgs)
+			padding-bottom: 710px	
+		+media(mdx)
+			order: -2
+			padding-bottom: 20px	
+			margin-top: -25px
+
+	&__box
+		position: absolute
+		//border: 18px solid #ffffff
+		border-radius: 25px
+		+media(mdx)
+			position: static
+		.about__image img
+			max-width: 472px
+
+		&:first-child
+			top: 200px
+			left: 8%
+			+media(lgs)
+				left: 5%
+			&:after
+				position: absolute
+				content: ' '
+				z-index: -1
+				top: -15px
+				left: -38%
+				width: 536px
+				height: 536px	
+				border-radius: 20px
+				background: linear-gradient(180deg, #E9F0F4 0%, rgba(233, 240, 244, 0) 100%)
+				transform: rotate(75deg)
+				+media(mdx)
+					display: none	
+
+		&:nth-child(2)
+			top: 115px
+			left: 31%
+
+		&:last-child
+			left: 54%
+			+media(lgs)
+				left: 50%
+			&:after
+				position: absolute
+				content: ' '
+				z-index: -1
+				top: 0px
+				right: -30%
+				width: 480px
+				height: 612px	
+				border-radius: 20px
+				background: linear-gradient(180deg, #E9F0F4 0%, rgba(233, 240, 244, 0) 100%)
+				transform: rotate(-165deg)
+				+media(mdx)
+					display: none

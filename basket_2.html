@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Каманчеро</title>
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+<svg class="svg-about">
+    <g id="icon-search">
+      <path d="M16 16L12.4584 12.4521L16 16ZM14.4211 7.71053C14.4211 9.49027 13.7141 11.1971 12.4556 12.4556C11.1971 13.7141 9.49027 14.4211 7.71053 14.4211C5.93078 14.4211 4.22394 13.7141 2.96547 12.4556C1.707 11.1971 1 9.49027 1 7.71053C1 5.93078 1.707 4.22394 2.96547 2.96547C4.22394 1.707 5.93078 1 7.71053 1C9.49027 1 11.1971 1.707 12.4556 2.96547C13.7141 4.22394 14.4211 5.93078 14.4211 7.71053V7.71053Z" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="icon-arrow">
+        <path d="M13.1061 0.0674227C12.9306 0.162101 12.8212 0.342135 12.8212 0.537947V3.58703L0.550721 3.58703C0.246723 3.58703 0 3.82803 0 4.12498C0 4.42193 0.246723 4.66293 0.550721 4.66293L12.8212 4.66293L12.8212 7.71201C12.8212 7.90854 12.9306 8.08858 13.1061 8.18254C13.2816 8.27794 13.496 8.27148 13.6656 8.16748L19.493 4.58044C19.653 4.48146 19.75 4.31003 19.75 4.12498C19.75 3.93993 19.653 3.7685 19.493 3.66952L13.6656 0.0824853C13.576 0.0279733 13.4739 0 13.3719 0C13.2808 0 13.189 0.0229524 13.1061 0.0674227Z"/>
+    </g>
+    <g id="icon-menu">
+        <path d="M4.88958 0.628862L2.83617 3.21029C2.64138 3.44645 2.34107 3.44645 2.1544 3.21029L0.100984 0.628862C-0.0938068 0.384562 0.00358848 0.197266 0.30389 0.197266H4.68668C4.99509 0.197266 5.08437 0.384562 4.88958 0.628862Z"/>
+    </g>
+    <g id="btn-heart">
+       <path d="M17.2422 2.46484C15.3086 0.8125 12.4609 1.12891 10.668 2.95703L10 3.66016L9.29688 2.95703C7.53906 1.12891 4.65625 0.8125 2.72266 2.46484C0.507812 4.36328 0.402344 7.73828 2.37109 9.77734L9.19141 16.8086C9.61328 17.2656 10.3516 17.2656 10.7734 16.8086L17.5938 9.77734C19.5625 7.73828 19.457 4.36328 17.2422 2.46484Z"></path>
+    </g>
+    <g id="btn-cart">
+        <path d="M.853 0a.833.833 0 1 0 0 1.667h.41a.833.833 0 0 1 .8.605l2.643 9.25a2.5 2.5 0 0 0 2.404 1.811h7.615a2.5 2.5 0 0 0 2.321-1.571l2.457-6.144a1.667 1.667 0 0 0-1.547-2.285H4.1l-.435-1.52A2.5 2.5 0 0 0 1.263 0h-.41ZM7.52 20a2.5 2.5 0 1 0 0-5.001 2.5 2.5 0 0 0 0 5.001ZM14.187 20a2.5 2.5 0 1 0 0-5.001 2.5 2.5 0 0 0 0 5.001Z"/>
+    </g>
+    <g id="btn-login">
+        <path d="M8 13.1739C12.3386 13.1739 16 13.8789 16 16.599C16 19.32 12.3146 20 8 20C3.66237 20 0 19.295 0 16.575C0 13.8539 3.68538 13.1739 8 13.1739ZM8 0C10.9391 0 13.294 2.35402 13.294 5.29105C13.294 8.22808 10.9391 10.5831 8 10.5831C5.0619 10.5831 2.70601 8.22808 2.70601 5.29105C2.70601 2.35402 5.0619 0 8 0Z"/>
+    </g>
+    <g id="icon-phone">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53174 10.4724C13.5208 14.4604 14.4258 9.84672 16.9656 12.3848C19.4143 14.8328 20.8216 15.3232 17.7192 18.4247C17.3306 18.737 14.8616 22.4943 6.1846 13.8197C-2.49348 5.144 1.26158 2.67244 1.57397 2.28395C4.68387 -0.826154 5.16586 0.589383 7.61449 3.03733C10.1544 5.5765 5.54266 6.48441 9.53174 10.4724Z" />
+    </g>
+    <g id="icon-facebook">
+        <path d="M16.9062 0.40625H1.09375C0.713477 0.40625 0.40625 0.713477 0.40625 1.09375V16.9062C0.40625 17.2865 0.713477 17.5938 1.09375 17.5938H16.9062C17.2865 17.5938 17.5938 17.2865 17.5938 16.9062V1.09375C17.5938 0.713477 17.2865 0.40625 16.9062 0.40625ZM14.9211 5.42285H13.5482C12.4719 5.42285 12.2635 5.93418 12.2635 6.68613V8.34258H14.833L14.4979 10.9357H12.2635V17.5938H9.58438V10.9379H7.34355V8.34258H9.58438V6.43047C9.58438 4.21113 10.94 3.00156 12.9209 3.00156C13.8705 3.00156 14.6848 3.07246 14.9232 3.10469V5.42285H14.9211Z"/>
+    </g>
+    <g id="icon-instagram">
+       <path d="M8.99986 6.13619C7.4229 6.13619 6.13599 7.4231 6.13599 9.00005C6.13599 10.577 7.4229 11.8639 8.99986 11.8639C10.5768 11.8639 11.8637 10.577 11.8637 9.00005C11.8637 7.4231 10.5768 6.13619 8.99986 6.13619ZM17.5893 9.00005C17.5893 7.81412 17.6001 6.63892 17.5335 5.45513C17.4669 4.08013 17.1532 2.85982 16.1477 1.85435C15.1401 0.846733 13.9219 0.535209 12.5469 0.468608C11.361 0.402006 10.1858 0.412748 9.00201 0.412748C7.81607 0.412748 6.64087 0.402006 5.45708 0.468608C4.08208 0.535209 2.86177 0.848881 1.8563 1.85435C0.848686 2.86197 0.537162 4.08013 0.470561 5.45513C0.403959 6.64107 0.414702 7.81626 0.414702 9.00005C0.414702 10.1838 0.403959 11.3612 0.470561 12.545C0.537162 13.92 0.850834 15.1403 1.8563 16.1458C2.86392 17.1534 4.08208 17.4649 5.45708 17.5315C6.64302 17.5981 7.81822 17.5874 9.00201 17.5874C10.1879 17.5874 11.3631 17.5981 12.5469 17.5315C13.9219 17.4649 15.1422 17.1512 16.1477 16.1458C17.1553 15.1381 17.4669 13.92 17.5335 12.545C17.6022 11.3612 17.5893 10.186 17.5893 9.00005ZM8.99986 13.4065C6.56138 13.4065 4.59341 11.4385 4.59341 9.00005C4.59341 6.56158 6.56138 4.59361 8.99986 4.59361C11.4383 4.59361 13.4063 6.56158 13.4063 9.00005C13.4063 11.4385 11.4383 13.4065 8.99986 13.4065ZM13.5868 5.44224C13.0174 5.44224 12.5577 4.98248 12.5577 4.41314C12.5577 3.8438 13.0174 3.38404 13.5868 3.38404C14.1561 3.38404 14.6159 3.8438 14.6159 4.41314C14.616 4.54833 14.5895 4.68223 14.5379 4.80716C14.4862 4.93209 14.4104 5.04561 14.3148 5.1412C14.2192 5.2368 14.1057 5.31259 13.9808 5.36425C13.8559 5.41591 13.722 5.44241 13.5868 5.44224Z"/>
+    </g>
+    <g id="icon-youtube">
+        <path d="M19.2232 2.36152C19.1137 1.9534 18.8988 1.58122 18.6002 1.28223C18.3016 0.98323 17.9297 0.76791 17.5217 0.657813C16.0199 0.253906 10 0.253906 10 0.253906C10 0.253906 3.98008 0.253906 2.47832 0.655664C2.07016 0.765404 1.69806 0.980605 1.39939 1.27966C1.10071 1.57871 0.885983 1.95108 0.776758 2.35938C0.375 3.86328 0.375 7 0.375 7C0.375 7 0.375 10.1367 0.776758 11.6385C0.998047 12.4678 1.65117 13.1209 2.47832 13.3422C3.98008 13.7461 10 13.7461 10 13.7461C10 13.7461 16.0199 13.7461 17.5217 13.3422C18.351 13.1209 19.002 12.4678 19.2232 11.6385C19.625 10.1367 19.625 7 19.625 7C19.625 7 19.625 3.86328 19.2232 2.36152ZM8.08789 9.87891V4.12109L13.0723 6.97852L8.08789 9.87891Z"/>
+    </g>
+    <g id="icon-del">
+        <path d="M14.9934 6.88588C15.1513 6.88588 15.2945 6.95476 15.4077 7.07113C15.5131 7.19542 15.5663 7.34979 15.5509 7.51288C15.5509 7.56671 15.1289 12.9025 14.8879 15.1484C14.737 16.5267 13.8485 17.3635 12.5158 17.3864C11.491 17.4094 10.4893 17.4173 9.503 17.4173C8.45589 17.4173 7.43187 17.4094 6.43788 17.3864C5.14978 17.3556 4.2605 16.5037 4.11729 15.1484C3.86937 12.8946 3.45515 7.56671 3.44745 7.51288C3.43975 7.34979 3.4921 7.19542 3.59835 7.07113C3.70306 6.95476 3.85397 6.88588 4.01258 6.88588H14.9934ZM11.1346 1.58398C11.8344 1.58398 12.4596 2.07244 12.6406 2.7691L12.7699 3.34701C12.8746 3.81805 13.2827 4.15133 13.7524 4.15133H16.0606C16.3686 4.15133 16.625 4.40704 16.625 4.73241V5.03324C16.625 5.3507 16.3686 5.61432 16.0606 5.61432H2.94013C2.63139 5.61432 2.375 5.3507 2.375 5.03324V4.73241C2.375 4.40704 2.63139 4.15133 2.94013 4.15133H5.24841C5.7173 4.15133 6.12536 3.81805 6.23085 3.3478L6.35173 2.80789C6.53959 2.07244 7.15785 1.58398 7.86542 1.58398H11.1346Z"/>
+    </g>
+</svg>
+
+<div class="wrap">
+
+    <header class="header">
+        <div class="container"> 
+            <div class="header__block"> 
+               <a href="#" class="header__logo"> 
+                    <img src="img/icons/logo/logo-inner.svg" width="224" height="42" alt="logo-header">
+                </a>
+                <a href="tel:+380507802108" class="header__phone">
+                    <svg viewBox="0 0 20 20">
+                        <use xlink:href="#icon-phone"></use>
+                    </svg>
+                    <span>+38 (050) 780 21 08</span>
+                </a>
+            </div>  
+        </div>   
+    </header>
+    <!--на этой странице добавился еще things--single-->
+
+    <section class="things things--single">
+        <div class="container">
+            <a href="#" class="checkout__link">Повернутись до покупок</a>
+            <h1 class="basket__title">Кошик</h1>
+            <div class="basket__holder">
+               <div class="checkout__wrap">
+                 <div class="things__col">
+                    <div class="things__aside">
+                        <a href="#"  class="things__image">
+                            <picture>
+                                <source srcset="img/product/webp/product2@2x.webp 2x, img/product/webp/product2@1x.webp 1x" type="image/webp">
+                                <source srcset="img/product/product2@2x.png 2x, img/product/product2@1x.png 1x">
+                                <img src="img/product/product2@1x.png" alt="product_2">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="things__block">
+                        <p class="things__code">код товару: 727737</p>
+                        <p class="things__name"><a href="#">Кроссовки мужские ASICS Gel-Trabuco 9 Gtx Black/Carrier Grey</a></p>
+                        <p class="things__size">Розмір:<span>43</span></p>
+                    </div>
+                    <div class="things__content"> 
+                        <div class="things__holder">
+                            <button type="button" class="things__btn things__btn--prev"></button>
+                            <input type="text" value="1" maxlength="2" class="things__input">
+                            <button type="button" class="things__btn things__btn--next"></button>
+                        </div>
+                        <div class="things__row">
+                            <p class="things__old"><span>1499</span>грн</p>
+                            <p class="things__single"><span data-old="1499" data-new="1099">1099</span>грн</p>
+                        </div> 
+                    </div>                   
+                    <button type="button" class="basket__del basket__del--product">
+                        <svg viewBox="0 0 19 19">
+                            <use xlink:href="#icon-del"></use>
+                        </svg>
+                    </button>
+                   <div class="things__popup">
+                        <span class="things__arrow"></span>
+                        <p class="things__ask">Точно видалити ?</p>
+                        <div class="things__wrapper">
+                            <button type="button" class="things__elem things__elem--no">Ні</button>
+                            <button type="button" class="things__elem things__elem--yes">Так</button>
+                        </div>
+                    </div>
+                 </div><!--end things__col-->
+                 <div class="things__col">
+                    <div class="things__aside">
+                        <a href="#"  class="things__image">
+                            <picture>
+                                <source srcset="img/product/webp/product2@2x.webp 2x, img/product/webp/product2@1x.webp 1x" type="image/webp">
+                                <source srcset="img/product/product2@2x.png 2x, img/product/product2@1x.png 1x">
+                                <img src="img/product/product2@1x.png" alt="product_2">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="things__block">
+                        <p class="things__code">код товару: 727737</p>
+                        <p class="things__name"><a href="#">Кроссовки мужские ASICS Gel-Trabuco 9 Gtx Black/Carrier Grey</a></p>
+                        <p class="things__size">Розмір:<span>43</span></p>
+                    </div>
+                    <div class="things__content"> 
+                        <div class="things__holder">
+                            <button type="button" class="things__btn things__btn--prev"></button>
+                            <input type="text" value="1" maxlength="2" class="things__input">
+                            <button type="button" class="things__btn things__btn--next"></button>
+                        </div>
+                        <div class="things__row">
+                            <p class="things__single"><span data-old="1099" data-new="1099">1099</span>грн</p>
+                        </div> 
+                    </div>                   
+                    <button type="button" class="basket__del basket__del--product">
+                        <svg viewBox="0 0 19 19">
+                            <use xlink:href="#icon-del"></use>
+                        </svg>
+                    </button>
+                    <div class="things__popup">
+                        <span class="things__arrow"></span>
+                        <p class="things__ask">Точно видалити ?</p>
+                        <div class="things__wrapper">
+                            <button type="button" class="things__elem things__elem--no">Ні</button>
+                            <button type="button" class="things__elem things__elem--yes">Так</button>
+                        </div>
+                    </div>
+                 </div><!--end things__col-->
+                  <div class="things__col">
+                    <div class="things__aside">
+                         <a href="#"  class="things__image">
+                            <picture>
+                                <source srcset="img/product/webp/product2@2x.webp 2x, img/product/webp/product2@1x.webp 1x" type="image/webp">
+                                <source srcset="img/product/product2@2x.png 2x, img/product/product2@1x.png 1x">
+                                <img src="img/product/product2@1x.png" alt="product_2">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="things__block">
+                        <p class="things__code">код товару: 727737</p>
+                        <p class="things__name"><a href="#">Кроссовки мужские ASICS Gel-Trabuco 9 Gtx Black/Carrier Grey</a></p>
+                        <p class="things__size">Розмір:<span>43</span></p>
+                    </div>
+                    <div class="things__content"> 
+                        <div class="things__holder">
+                            <button type="button" class="things__btn things__btn--prev"></button>
+                            <input type="text" value="1" maxlength="2" class="things__input">
+                            <button type="button" class="things__btn things__btn--next"></button>
+                        </div>
+                        <div class="things__row">
+                            <p class="things__single"><span data-old="1099" data-new="1099">1099</span>грн</p>
+                        </div> 
+                    </div>                   
+                    <button type="button" class="basket__del basket__del--product">
+                        <svg viewBox="0 0 19 19">
+                            <use xlink:href="#icon-del"></use>
+                        </svg>
+                    </button>
+                   <div class="things__popup">
+                        <span class="things__arrow"></span>
+                        <p class="things__ask">Точно видалити ?</p>
+                        <div class="things__wrapper">
+                            <button type="button" class="things__elem things__elem--no">Ні</button>
+                            <button type="button" class="things__elem things__elem--yes">Так</button>
+                        </div>
+                    </div>
+                 </div><!--end things__col-->
+               </div><!--end checkout__wrap-->
+               <div class="basket__aside">
+                   <p class="basket__elem">Сума замовлення:</p>
+                   <p class="basket__discount">Знижка за промокодом:</p>
+                   <div class="basket__wrapper">
+                        <div class="basket__col">
+                            <p class="basket__point"><span>“23-12-12-33”</span> - 140 грн</p>
+                            <button class="basket__remove"></button>
+                        </div>
+                        <div class="basket__col">
+                            <p class="basket__point"><span>“76-22-11-11”</span> - 55 грн</p>
+                           <button class="basket__remove"></button>
+                        </div>
+                   </div>
+                   <p class="basket__old"><span id="product__sum">1 499</span>грн</p>
+                   <p class="basket__sum"><span id="product__current">1 099</span>грн</p>
+                   <div class="basket__user">
+                       <div class="basket__wrap basket__wrap--error">
+                           <input class="basket__add" placeholder="123-12-12-33">
+                           <button type="button" class="basket__apply">Застосувати</button>
+                       </div>
+                       <p class="basket__error">Недійсний промокод або сертифікат</p>
+                   </div>
+                   <button class="basket__btn">Оформити замовлення</button>
+               </div>
+           </div>
+       </div>
+    </section>
+
+    <section class="similar">
+        <div class="container">
+            <p class="similar__title">З цим товаром купують</p>
+            <div class="similar__holder">
+                <div class="swiper similar__wrap">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product__item">
+                                 <div class="product__wrap-block">   
+                                    <a href="#" class="product__pic">
+                                        <picture class="product__image product__image--visible">
+                                            <source srcset="img/similar/webp/sim1_2x.webp 2x, img/similar/webp/sim1_1x.webp 1x" type="image/webp">
+                                            <source srcset="img/similar/sim1_2x.png 2x, img/similar/sim1_1x.png 1x">
+                                            <img src="img/similar/sim1_1x.png" alt="product_2">
+                                        </picture>
+                                     </a>
+                                </div>
+                                <a href="#" class="product__name"><p>Фара передняя Lezyne SUPER DRIVE</p></a>
+                               <div class="product__block">
+                                    <p class="product__price"><span>1 099</span> грн</p>
+                                    <button class="similar__btn">
+                                        <svg class="similar__icon" viewBox="0 0 20 20">
+                                            <use xlink:href="#btn-cart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!--end swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="product__item">
+                                 <div class="product__wrap-block">   
+                                    <a href="#" class="product__pic">
+                                        <picture class="product__image product__image--visible">
+                                            <source srcset="img/similar/webp/sim2_2x.webp 2x, img/similar/webp/sim2_1x.webp 1x" type="image/webp">
+                                            <source srcset="img/similar/sim2_2x.png 2x, img/similar/sim2_1x.png 1x">
+                                            <img src="img/similar/sim2_1x.png" alt="product_2">
+                                        </picture>
+                                     </a>
+                                </div>
+                                <a href="#" class="product__name"><p>Ручки керма FLUO Neone Yellow з замком</p></a>
+                               <div class="product__block">
+                                    <p class="product__price"><span>1 099</span> грн</p>
+                                    <button class="similar__btn">
+                                        <svg class="similar__icon" viewBox="0 0 20 20">
+                                            <use xlink:href="#btn-cart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!--end swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="product__item">
+                                 <div class="product__wrap-block">   
+                                    <a href="#" class="product__pic">
+                                        <picture class="product__image product__image--visible">
+                                            <source srcset="img/similar/webp/sim3_2x.webp 2x, img/similar/webp/sim3_1x.webp 1x" type="image/webp">
+                                            <source srcset="img/similar/sim3_2x.png 2x, img/similar/sim3_1x.png 1x">
+                                            <img src="img/similar/sim3_1x.png" alt="product_2">
+                                        </picture>
+                                     </a>
+                                </div>
+                                <a href="#" class="product__name"><p>Велосипедный рюкзак Deuter COMPACT EXP 12 steel-papaya ...</p></a>
+                               <div class="product__block">
+                                    <p class="product__price"><span>1 099</span> грн</p>
+                                    <button class="similar__btn">
+                                        <svg class="similar__icon" viewBox="0 0 20 20">
+                                            <use xlink:href="#btn-cart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!--end swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="product__item">
+                                 <div class="product__wrap-block">   
+                                    <a href="#" class="product__pic">
+                                        <picture class="product__image product__image--visible">
+                                            <source srcset="img/similar/webp/sim2_2x.webp 2x, img/similar/webp/sim2_1x.webp 1x" type="image/webp">
+                                            <source srcset="img/similar/sim2_2x.png 2x, img/similar/sim2_1x.png 1x">
+                                            <img src="img/similar/sim2_1x.png" alt="product_2">
+                                        </picture>
+                                     </a>
+                                </div>
+                                <a href="#" class="product__name"><p>Ручки керма FLUO Neone Yellow з замком</p></a>
+                               <div class="product__block">
+                                    <p class="product__price"><span>1 099</span> грн</p>
+                                    <button class="similar__btn">
+                                        <svg class="similar__icon" viewBox="0 0 20 20">
+                                            <use xlink:href="#btn-cart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!--end swiper-slide-->
+                         <div class="swiper-slide">
+                            <div class="product__item">
+                                 <div class="product__wrap-block">   
+                                    <a href="#" class="product__pic">
+                                        <picture class="product__image product__image--visible">
+                                            <source srcset="img/similar/webp/sim2_2x.webp 2x, img/similar/webp/sim2_1x.webp 1x" type="image/webp">
+                                            <source srcset="img/similar/sim2_2x.png 2x, img/similar/sim2_1x.png 1x">
+                                            <img src="img/similar/sim2_1x.png" alt="product_2">
+                                        </picture>
+                                     </a>
+                                </div>
+                                <a href="#" class="product__name"><p>Ручки керма FLUO Neone Yellow з замком</p></a>
+                               <div class="product__block">
+                                    <p class="product__price"><span>1 099</span> грн</p>
+                                    <button class="similar__btn">
+                                        <svg class="similar__icon" viewBox="0 0 20 20">
+                                            <use xlink:href="#btn-cart"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!--end swiper-slide-->
+                    </div><!--end swiper-wrapper-->
+                </div><!--end similar__wrap-->
+            <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                    <svg viewBox="0 0 20 9">
+                        <use xlink:href="#icon-arrow"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-prev">
+                    <svg viewBox="0 0 20 9">
+                        <use xlink:href="#icon-arrow"/>
+                    </svg>
+                </div>
+            </div><!--end similar__holder-->
+        </div>
+    </section>
+
+     <footer class="main-footer">
+        <div class="container">
+          <div class="main-footer__wrap">
+            <div class="main-footer__aside">    
+                <a href="#" class="main-footer__logo">
+                    <img src="img/icons/logo/logo-footer.svg" width="152" height="78" alt="logo-footer">
+                </a>
+                <p class="main-footer__desc">All rights reserved 2021</p>
+            </div>
+              
+              <div class="main-footer__block">
+                <div class="main-footer__item">
+                    <p class="main-footer__title">Сторінки</p>
+                    <ul class="main-footer__col">
+                        <li><a href="#" class="main-footer__link">Оплата і доставка</a></li>
+                        <li><a href="#" class="main-footer__link">Контакти</a></li>
+                        <li><a href="#" class="main-footer__link">Повернення</a></li>
+                        <li><a href="#" class="main-footer__link">Подарунковий сертифікат</a></li>
+                        <li><a href="#" class="main-footer__link">Бадмінтон та тенісний корт </a></li>
+                        <li><a href="#" class="main-footer__link">Договір публічної оферти</a></li>
+                    </ul>
+                </div>
+                <div class="main-footer__item">
+                    <p class="main-footer__title">Сервіс</p>
+                      <ul class="main-footer__col">
+                        <li><a href="#" class="main-footer__link">Ремонт</a></li>
+                        <li><a href="#" class="main-footer__link">Прокат</a></li>
+                        <li><a href="#" class="main-footer__link">Бонусна система</a></li>
+                        <li><a href="#" class="main-footer__link">Про магазин</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="main-footer__contacts">   
+                <div class="main-footer__holder">   
+                    <p class="main-footer__title">Адреса та графік роботи</p>
+                    <p class="main-footer__address">Львів, вул. Листопадна 16</p>
+                    <div class="main-footer__text"> 
+                        <p><strong>Пн-Пт:</strong>     10:00 - 19:00</p>
+                        <p><strong>Субота:</strong>   10:00 - 18:00</p>
+                        <p><strong>Неділя:</strong>     Вихідний</p>
+                    </div>
+                </div>
+                <div class="main-footer__holder">   
+                    <p class="main-footer__title">Телефони</p>
+                    <div class="main-footer__wrapper">   
+                        <p class="main-footer__subtitle">Інтернет-магазин</p>
+                        <a href="tel:+380507802108" class="main-footer__phone">(050) 780-21-08</a>
+                        <p class="main-footer__subtitle">Магазин</p>
+                        <a href="tel:+380689494867" class="main-footer__phone">(068) 94-94-867</a>
+                        <p class="main-footer__subtitle">Ремонт та прокат</p>
+                        <a href="tel:+380631541880" class="main-footer__phone">(063) 154-18-80</a>
+                    </div>
+                    <div class="main-footer__socials">  
+                        <a href="#" target="_blank" class="main-footer__user">
+                            <svg viewBox="0 0 20 20">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="main-footer__user">
+                            <svg viewBox="0 0 20 14">
+                                <use xlink:href="#icon-youtube"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="main-footer__user">
+                             <svg viewBox="0 0 20 20">
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </footer>
+
+</div>
+
+<button class="scroll-up">
+    <svg viewBox="0 0 20 9">
+        <use xlink:href="#icon-arrow"></use>
+    </svg>
+</button>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/lazysizes.min.js" async=""></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/basket.js"></script>
+
+    </body>
+</html>
+

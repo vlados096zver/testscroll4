@@ -1,0 +1,348 @@
+@import 'responsive'
+
+.basket
+	margin-top: 18px
+	.checkout__column:not(:last-child)
+		margin-right: 40px
+
+	.checkout__subtitle
+		padding-bottom: 14px
+
+	.checkout__link
+		margin-bottom: 16px
+
+	.checkout__wrap
+		padding-top: 0px
+
+	&__row
+		background-color: #f7fafc
+		border-radius: 45px
+		padding-bottom: 20px
+		+media(sm)
+			padding-bottom: 14px
+			border-radius: 20px
+
+	&__content
+		display: flex
+		align-items: center
+		padding-top: 16px
+
+	&__block
+		&--fixed
+			position: fixed
+			top: 0px
+			width: 100%
+			margin: 0 auto	
+			background-color: #fff
+			z-index: 20
+			+media(sm)
+				padding: 0 8px
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		padding-bottom: 22px
+		margin-right: 32px
+		font-weight: 700
+
+	&__list
+		display: flex
+		align-items: center
+
+	&__box
+		display: block
+		cursor: pointer
+		font-size: 16px
+		line-height: 1.2
+		color: #000000
+		padding: 0 15px
+		padding-top: 8px
+		padding-bottom: 22px
+		border-bottom: 2px solid transparent
+		&--active
+			color: #3453f3
+			border-bottom: 2px solid #3453f3
+
+	&__subtitle
+		font-size: 36px
+		line-height: 1.2
+		color: #3453f3
+		padding: 17px 0
+		font-weight: 700
+		+media(sm)
+			font-size: 18px
+			padding: 28px 0
+
+	&__holder
+		display: flex
+		flex-wrap: wrap
+		.checkout__wrap
+			width: calc(100% - 412px)
+			padding-right: 24px
+			+media(lgxs)
+				width: calc(100% - 340px)
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+			
+	&__aside
+		width: 412px
+		align-self: flex-start
+		border: 1px solid #e9e8f4
+		border-radius: 25px
+		background-color: #ffffff
+		padding: 22px 14px
+		padding-bottom: 32px
+		+media(lgxs)
+			width: 340px
+		+media(mdx)
+			width: 100%
+
+	&__del
+		display: block
+		cursor: pointer
+		position: absolute
+		top: 16px
+		right: 35px
+		width: 19px
+		height: 19px
+		border: none
+		outline: none
+		background-color: #fff
+		padding: 0px
+		+media(mdx)
+			top: 13px
+			right: 16px
+			width: 15px
+			height: 16px
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			fill: #7d8491
+		&:hover
+			svg
+				fill: #3453f3
+				transition: 0.25s fill
+
+	&__elem
+		font-size: 16px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		padding-bottom: 22px
+		font-weight: 700
+
+	&__sum
+		font-size: 20px
+		color: #002638
+		text-align: center
+		padding-bottom: 24px
+		font-weight: 700
+		span
+			font-size: 24px
+			padding-right: 5px
+
+	&__user
+		position: relative
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		background-color: #fff
+		max-width: 382px
+		width: 100%
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 0 24px
+		overflow: hidden
+		margin: 0 auto
+		margin-bottom: 38px
+		&--error
+			border-color: #fd2330
+
+	&__add
+		display: block
+		width: calc(100% - 120px)
+		font-size: 13px
+		line-height: 1.2
+		color: #002638
+		text-align: left
+		border: none
+		padding: 24px 10px
+		padding-right: 30px
+		font-weight: 500
+		font-family: TTNorms
+		&::placeholder
+			text-align: left
+			text-transform: uppercase
+		&:focus::placeholder
+			color: transparent
+
+	&__apply
+		cursor: pointer
+		width: 100px
+		font-size: 13px
+		line-height: 1.2
+		color: #3453f3
+		background-color: #fff
+		text-transform: uppercase
+		padding: 0px
+		border: none
+		outline: none
+		font-weight: normal
+		font-family: TTNorms
+		font-weight: 700
+
+	&__error
+		position: absolute
+		bottom: -32px
+		width: 100%
+		text-align: center
+		font-size: 13px
+		line-height: 1.2	
+		color: #fd2330
+		text-align: center
+		margin-bottom: 8px
+		font-weight: 500
+
+	&__btn
+		cursor: pointer
+		position: relative
+		font-size: 12px
+		line-height: 1.2
+		color: #fff
+		display: block
+		background-color: #3453f3
+		outline: none
+		border: none
+		border-radius: 15px
+		text-align: left
+		text-transform: uppercase
+		padding: 26px 66px
+		padding-left: 43px
+		margin: 0 auto
+		font-weight: 700
+		font-family: TTNorms
+		transition: 0.25s background-color
+		&:after
+			position: absolute
+			content: ' '
+			top: calc(50% - 1px)
+			transform: translateY(-50%)
+			right: 30px
+			background-image: url(../img/icons/decor/check.svg)
+			width: 8px
+			height: 7px
+			background-size: 8px 7px
+			filter: invert(96%) sepia(96%) saturate(0%) hue-rotate(99deg) brightness(105%) contrast(103%)
+
+		&:hover
+			background-color: #2841bf
+
+	&__old
+		font-size: 16px	
+		line-height: 1.2	
+		color: #79778a
+		text-align: center
+		text-decoration: line-through
+		padding-bottom: 2px
+		span
+			padding-right: 5px
+
+	&__discount
+		font-size: 13px
+		line-height: 1.2
+		color: #79778a
+		text-align: center
+		padding-bottom: 13px
+
+	&__wrapper
+		padding-bottom: 5px
+
+	&__col
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 14px
+
+	&__point
+		position: relative
+		font-size: 13px
+		line-height: 1.2
+		color: #002638
+		padding-right: 20px
+
+	&__remove
+		display: block
+		cursor: pointer
+		position: relative
+		width: 12px
+		height: 12px
+		padding: 0px
+		border: none
+		outline: none
+		background-color: transparent
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			transform: translateY(-50%)
+			right: 0px
+			width: 12px
+			height: 12px
+			mask: url(../img/icons/decor/del.svg)
+			-webkit-mask: url(../img/icons/decor/del.svg)
+			background-repeat: no-repeat
+			background-size: 100%
+			background-position: right center
+			background-color: #79778a
+
+		&:hover
+			&:after
+				background-color: #3453f3
+				transition: 0.25s background-color
+
+	&__empty
+		font-size: 14px
+		line-height: 1.2
+		color: #79778a
+		padding-top: 20px
+		padding-bottom: 100px
+		+media(mdx)
+			padding-bottom: 70px
+		+media(sm)
+			padding-bottom: 40px
+
+	&__return
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 208px
+		font-size: 12px
+		line-height: 1.2
+		color: #ffffff
+		background: #3453f3
+		border: none
+		border-radius: 15px
+		outline: none
+		text-transform: uppercase
+		padding: 23px 10px
+		margin-top: auto
+		font-weight: 700
+		font-family: TTNorms
+		&:hover
+			transition: 0.25s background-color
+			background-color: #2841bf
+		span
+			display: block
+			padding-right: 10px
+
+		svg
+			display: block
+			width: 20px
+			height: 20px
+			fill: #fff

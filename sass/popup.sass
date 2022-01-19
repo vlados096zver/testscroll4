@@ -1,0 +1,566 @@
+@import 'responsive'
+
+.popup
+	position: fixed
+	z-index: 15
+	top: 0px
+	width: 100%
+	//height: 100vh
+	height: 100%
+	transform: translateX(-100%)
+	background-color: #002638
+	overflow-y: auto
+	overflow-x: hidden
+	padding: 0 8px
+	padding-top: 17px	
+	transition: transform 0.25s ease-in-out
+	&--active
+		transform: translateX(0)
+
+	&--bg
+		filter: blur(4px)
+
+	&--size,
+	&--order,
+	&--conditions,
+	&--code,
+	&--availability
+		display: flex
+		align-items: center
+		justify-content: center
+		opacity: 0
+		visibility: hidden
+		transform: none
+		padding: 0 8px
+		background-color: rgba(8, 12, 33, 0.44)
+		transition: opacity 0.25s
+		&.popup--active
+			opacity: 1
+			visibility: visible
+
+	&--size,
+	&--order,
+	&--conditions,
+	&--availability
+		.catalog__btn-mob
+			width: 30px	
+			height: 30px	
+			&:after
+				width: 30px	
+				height: 30px	
+				background-size: 30px
+
+	&--conditions
+		padding: 0px 20px
+
+	&--catalog
+		display: none	
+		border: 1px solid #e9e8f4
+		border-radius: 0px
+		background-color: #fff
+		padding: 10px		
+		+media(sm)
+			display: block	
+
+		.catalog__btn-mob
+			display: none	
+			+media(sm)
+				display: block	
+
+	&--city
+		opacity: 0
+		visibility: hidden
+		left: 0px
+		transform: none
+		background-color: rgba(8, 12, 33, 0.44)
+		display: flex	
+		align-items: center
+		justify-content: center
+		padding: 20px 0	
+		transition: 0.25s opacity
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			left: 0px
+			width: 100%	
+			height: 100%	
+			filter: blur(4px)
+
+		&.popup--active
+			opacity: 1
+			visibility: visible
+
+	&--inner
+		display: none
+		position: fixed
+		z-index: 11
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100vh
+		background-color: #fff
+		padding: 0px
+		transform: translateX(-100%)
+		overflow-y: auto
+		overflow-x: hidden
+		transition: transform 0.25s ease-in-out
+		+media(sm)
+			display: block
+
+		&::-webkit-scrollbar
+			display: none
+
+		&::-moz-scrollbar
+			width: 0px
+			height: 0px
+
+		&.popup--active
+			transform: translateX(0)
+			opacity: 1
+			visibility: visible
+
+	&__wrap-inner
+		max-width: 315px		
+		width: 100%	
+		background-color: #fff
+		border-radius: 17px
+		padding: 30px 45px
+
+	&__text
+		position: relative
+		font-size: 18px	
+		line-height: 1.2	
+		color: #262832
+		text-align: center
+		padding-top: 41px	
+		padding-bottom: 20px	
+		font-weight: 500	
+		&:after
+			position: absolute
+			content: ' '
+			z-index: 3
+			top: 0
+			transform: translateX(-50%)
+			left: 50%
+			width: 22px
+			height: 17px
+			background-image: url(../img/icons/decor/check.svg)
+			background-repeat: no-repeat
+			background-position: top center
+			background-size: 22px 17px
+			filter: invert(81%) sepia(22%) saturate(736%) hue-rotate(90deg) brightness(88%) contrast(90%)
+
+	&__btn-order
+		display: block	
+		max-width: 220px
+		width: 100%	
+		font-size: 15px	
+		line-height: 1.2	
+		letter-spacing: 0.15px
+		color: #fff
+		background-color: #3453f3
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		text-align: center
+		padding: 21px 15px	
+		min-height: 62px	
+		margin-bottom: 21px	
+		font-family: TTNorms
+		transition: 0.25s background-color	
+		&:hover
+			background-color: #253db3
+
+	&__close-order
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		width: 40px	
+		height: 40px	
+		background-color: #ecedef
+		border: none
+		border-radius: 100%
+		padding: 0px	
+		margin: 0 auto
+		&:after
+			position: absolute
+			content: ' '
+			z-index: 2
+			top: 50%
+			left: 50%
+			width: 12px
+			height: 12px
+			transform: translate(-50%, -50%)
+			mask: url(../img/icons/decor/block-close.svg)
+			-webkit-mask: url(../img/icons/decor/block-close.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 12px
+			background-color: #79778a
+
+		svg
+			display: block
+			width: 40px
+			height: 40px
+
+	&__wrapper
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			z-index: -1
+			top: -50px
+			left: -10px
+			width: calc(100% + 20px)
+			height: 40px
+			//background: linear-gradient(0deg, #fdfdfe 0%, #f3f4f6 100%)
+			box-shadow: 0px 20px 40px rgba(16,42,57,0.08)
+	
+	&--menu
+		display: none
+		+media(sm)
+			display: block
+
+	.mob-menu__wrap
+		padding-bottom: 21px	
+		border-bottom: 1px solid rgba(233, 232, 244, 0.1)
+		margin-bottom: 14px	
+
+	.mob-menu__link
+		color: #fff
+		padding-top: 20px	
+		&:after
+			width: 15px	
+			height: 15px	
+			background-size: 15px
+			filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(254deg) brightness(104%) contrast(101%)	
+
+	.mob-menu__count
+		top: -7px
+		right: 0px
+		width: 12px
+		height: 12px	
+		border: 1px solid #fff
+
+	.main-header__map
+		margin-bottom: 26px	
+
+	.main-footer__text
+		padding-bottom: 12px	
+
+	.main-footer__socials
+		padding-top: 0px	
+
+	&__search-wrap
+		display: flex	
+		align-items: center
+		border-radius: 10px
+		overflow: hidden
+		margin-bottom: 22px	
+
+	&__input
+		display: block	
+		width: calc(100% - 35px)
+		min-height: 35px	
+		font-size: 13px	
+		line-height: 1.2	
+		color: #9391a7
+		border: none
+		border-radius: 0px
+		outline: none
+		padding: 8px 10px	
+		padding-left: 3px	
+
+	&__btn
+		display: block
+		width: 35px	
+		height: 35px	
+		background-color: #fff
+		border: none
+		outline: none
+		padding: 0px
+		svg
+			display: block	
+			stroke: #9391a7
+			fill: transparent
+			width: 12px	
+			height: 12px	
+			margin: 0 auto
+
+	&__list
+		padding-bottom: 10px	
+
+	&__link
+		display: block
+		font-size: 15px
+		line-height: 1.2
+		color: #fff
+		margin-bottom: 14px	
+
+		&--brends,
+		&--discount,
+		&--login
+			position: relative
+			font-size: 12px
+			text-transform: uppercase
+			padding-left: 29px
+			font-weight: 700	
+			&:after
+				position: absolute
+				content: ' '
+				top: 50%
+				left: 0px
+				width: 19px	
+				height: 19px	
+				transform: translateY(-50%)
+				background-repeat: no-repeat
+				background-size: 19px
+				background-position: left center
+				filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(66deg) brightness(105%) contrast(104%)
+
+		&--brends
+			&:after
+				background-image: url(../img/icons/menu/brends.svg)
+
+		&--discount
+			&:after
+				background-image: url(../img/icons/menu/discount.svg)
+
+		&--login
+			margin-bottom: 26px
+			&:after
+				background-image: url(../img/icons/menu/login.svg)
+				width: 15px	
+				height: 18px	
+				background-size: 15px 18px
+
+	&__info
+		background-color: #0d3547
+		border-radius: 15px
+		padding: 10px 22px
+		padding-bottom: 24px	
+		margin-bottom: 9px
+
+	&__shop
+		font-size: 15px
+		color: #fff
+		letter-spacing: 0.15px
+		margin-right: 38px
+		margin-bottom: 20px	
+		font-weight: 500
+		span
+			display: inline-block
+			color: #85979f
+			margin-right: 6px
+
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #e9e8f4
+		padding: 12px 10px
+
+	&__holder
+		margin-top: 22px
+
+	&__row
+		position: relative
+		z-index: 12
+
+	&__title
+		font-size: 14px
+		line-height: 1.2
+		color: #9391a7
+		padding: 2px 0
+		padding-left: 34px
+		font-weight: normal
+		&--catalog
+			background-image: url(../img/icons/decor/show-catalog.svg)
+			background-size: 20px
+			background-repeat: no-repeat
+			background-position: left center
+
+		&--active
+			background-image: none
+			position: relative
+			padding-left: 28px
+			&:after
+				position: absolute
+				content: ' '
+				top: 50%
+				left: 0px
+				width: 10px	
+				height: 10px	
+				border-bottom: 2px solid #002638
+				border-left: 2px solid #002638
+				transform: translateY(-50%) rotate(45deg)
+
+	&__elem
+		cursor: pointer
+		position: relative
+		display: block
+		width: 35px	
+		height: 35px	
+		background-color: #fff
+		border: none
+		outline: none
+		padding: 0px
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 12px	
+			height: 12px	
+			background-image: url(../img/icons/decor/block-close.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 12px 12px
+
+	&__col
+		position: relative
+		display: inline-block
+		font-size: 12px
+		line-height: 1.2
+		color: #002638
+		text-transform: uppercase
+		padding-left: 29px
+		padding-right: 10px
+		margin-left: 8px	
+		margin-bottom: 40px
+		font-weight: 700	
+		transition: 0.25s color
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			transition: 0.25s background-color
+
+		&:after
+			top: 50%
+			right: 0px
+			transform: translate(-50%, -50%) rotate(-90deg)
+			width: 5px
+			height: 4px
+			background-size: 5px 4px
+			-webkit-mask: url(../img/icons/decor/arrow-menu.svg)
+			mask: url(../img/icons/decor/arrow-menu.svg)
+			background-color: #000
+
+		&:before
+			top: -2px
+			left: 0px
+			width: 20px
+			height: 20px
+			background-size: 20px
+			background-position: left center
+			background-color: #c3c1df
+
+		&:hover
+			color: #3453f3
+			&:after,
+			&:before
+				background-color: #3453f3
+
+		&--sport
+			&:before
+				-webkit-mask: url(../img/icons/menu/sport.svg)
+				mask: url(../img/icons/menu/sport.svg)
+
+		&--mountain
+			&:before
+				-webkit-mask: url(../img/icons/menu/mountain.svg)
+				mask: url(../img/icons/menu/mountain.svg)
+
+		&--bicycle_loads
+			&:before
+				-webkit-mask: url(../img/icons/menu/bicycle_loads.svg)
+				mask: url(../img/icons/menu/bicycle_loads.svg)
+
+		&--roller_skates
+			&:before
+				-webkit-mask: url(../img/icons/menu/roller_skates.svg)
+				mask: url(../img/icons/menu/roller_skates.svg)
+
+
+		&--racket_sports
+			&:before
+				-webkit-mask: url(../img/icons/menu/racket_sports.svg)
+				mask: url(../img/icons/menu/racket_sports.svg)
+
+		&--rest_water
+			&:before
+				-webkit-mask: url(../img/icons/menu/rest_water.svg)
+				mask: url(../img/icons/menu/rest_water.svg)
+
+		&--clothes_shoes
+			&:before
+				-webkit-mask: url(../img/icons/menu/clothes_shoes.svg)
+				mask: url(../img/icons/menu/clothes_shoes.svg)
+
+	&__submenu
+		position: absolute
+		z-index: 12
+		top: 82px
+		transform: translateX(-100%)
+		width: 100%
+		height: 100%
+		background-color: #fff
+		padding: 0 8px
+		transition: 0.25s transform ease-in-out
+
+		&--active
+			transform: translateX(0%)
+
+	&__user
+		border-bottom: 1px solid #e9e8f4
+		padding-bottom: 10px
+		margin-bottom: 22px
+
+	&__subtitle
+		font-size: 12px
+		line-height: 1.2
+		color: #000000
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 22px
+		a
+			color: inherit
+			display: inline-block
+			font-weight: 700
+
+	&__block
+		display: block
+		width: max-content
+		font-size: 14px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 13px
+		font-weight: 500
+		transition: 0.25s color
+
+		&:hover
+			color: #3453f3
+
+	&__single
+		font-size: 12px	
+		line-height: 1.2	
+		color: #000
+		border: 1px solid #000
+		border-radius: 20px
+		text-align: center
+		text-transform: uppercase
+		padding: 28px 5px
+		margin-bottom: 9px
+		font-weight: 700	
+		transition: 0.25s color, 0.25s color
+		a
+			display: block	
+			color: #000
+		&:hover
+			color: #3453f3
+			border-color: #3453f3

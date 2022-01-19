@@ -1,0 +1,113 @@
+@import 'responsive'
+
+
+.city
+	&__wrap-select
+		position: relative
+		margin-bottom: 12px
+
+	&__inner
+		position: relative
+		z-index: 3
+		max-width: 320px
+		width: 100%	
+		max-height: 80vh
+		background-color: #fff
+		border-radius: 17px
+		overflow: auto
+		overflow-x: hidden
+		padding: 20px
+		scrollbar-width: none
+		&::-webkit-scrollbar
+			display: none
+		
+
+	&__holder
+		display: flex	
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px	
+
+	&__close
+		cursor: pointer
+		position: relative
+		width: 20px	
+		height: 20px
+		border: none
+		outline: none
+		background-color: #fff
+		padding: 0px
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			left: 50%
+			width: 12px	
+			height: 12px
+			transform: translate(-50%, -50%)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 12px 12px
+			mask: url(../img/icons/decor/block-close.svg)
+			-webkit-mask: url(../img/icons/decor/block-close.svg)
+			background-color: #002638
+
+	&__title
+		font-size: 14px	
+		line-height: 1.2	
+		color: #262832
+		font-weight: 700	
+
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		padding-bottom: 16px	
+
+	&__item
+		cursor: pointer
+		font-size: 14px	
+		line-height: 1.2	
+		color: #262832
+		background-color: #ecedef
+		border-radius: 7px
+		padding: 4px 17px
+		margin-bottom: 6px	
+		transition: 0.25s background-color, 0.25s color
+		&:not(:last-child)
+			margin-right: 11px
+
+		&:hover
+			background-color: #3453f3
+			color: #fff
+
+	&__row
+		display: flex	
+		align-items: center
+
+	&__btn
+		display: block	
+		cursor: pointer
+		max-width: 125px
+		width: 100%	
+		font-size: 14px	
+		line-height: 1.2	
+		border: none
+		border-radius: 8px
+		outline: none
+		padding: 15px 10px 
+		font-style: normal
+		font-family: TTNorms
+		transition: 0.25s background-color
+		&--apply
+			color: #fff
+			background-color: #3453f3
+			margin-right: 30px	
+			&:hover
+				background-color: #253db3
+
+		&--cancel
+			color: #002638
+			background-color: #fff
+
+	&__select
+		display: block

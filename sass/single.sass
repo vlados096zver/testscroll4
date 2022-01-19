@@ -1,0 +1,156 @@
+@import 'responsive'
+
+.single
+	margin-bottom: 34px
+	+media(mdx)
+		margin-bottom: 25px
+	+media(sm)
+		margin-bottom: 15px
+
+	&__wrap	
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		background-color: #e9f0f4
+		border-radius: 20px
+		padding: 60px 50px
+		padding-bottom: 30px
+		+media(mdx)
+			padding: 25px 15px
+			padding-bottom: 30px
+
+	&__item
+		+media(mdx)
+			display: contents
+		&--content
+			width: calc(100% - 432px)
+			max-width: 615px
+			padding-right: 50px
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+				max-width: 100%	
+
+		&--aside
+			width: 432px	
+			align-self: flex-start
+			+media(mdx)
+				width: 100%
+
+	&__title
+		font-size: 36px
+		line-height: 1.2
+		color: #002638
+		padding-bottom: 32px
+		+media(mdx)
+			order: -3
+			width: 100%
+			font-size: 24px
+			padding-bottom: 22px
+
+	&__text
+		p
+			font-size: 18px
+			line-height: 1.27
+			color: #262832
+			+media(mdx)
+				font-size: 16px
+				line-height: 1.5
+			&:not(:last-child)
+				padding-bottom: 1em
+
+		ul, ol
+			&:not(:last-child)
+				margin-bottom: 25px
+			li
+				font-size: 14px
+				line-height: 1.64
+				color: #002638
+				&:not(:last-child)
+					padding-bottom: 5px
+				strong
+					display: block	
+					font-weight: 700
+
+		ul
+			li
+				position: relative
+				list-style-type: none
+				padding-left: 24px
+				&:after
+					position: absolute
+					content: ' '
+					top: 10px
+					left: 12px
+					width: 4px
+					height: 4px
+					background-color: #000000
+					border-radius: 50%
+
+		ol
+			list-style-type: none
+			padding: 0px	
+			margin: 0px	
+			margin-bottom: 25px	
+			li
+				counter-increment: listCounter
+				font-size: 14px	
+				line-height: 1.64	
+				color: #000
+				padding-bottom: 3px	
+				&:before
+					content: counter(listCounter) ') '
+
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		padding-bottom: 22px
+		+media(smx)
+			flex-direction: column
+			padding-bottom: 0px
+
+	&__box
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+
+		&:first-child
+			margin-right: 118px
+			+media(smx)
+				margin-right: 0px
+
+	&__icon
+		width: 54px
+		height: 54px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #f6f8fc
+		border-radius: 50%
+
+	&__desc
+		padding-left: 25px
+
+	&__elem
+		font-size: 14px	
+		line-height: 1.2	
+		color: #7d8491
+		padding-bottom: 5px
+
+	&__year
+		font-size: 24px
+		line-height: 1.2
+		color: #262832
+		font-weight: 700
+
+	&__pic
+		display: block
+		width: 100%
+		max-width: 462px
+		background-color: #ffffff
+		border: 1px solid #e9e8f4
+		border-radius: 24px
+		padding: 48px 34px
+		+media(mdx)
+			order: -2
+			margin-bottom: 24px

@@ -1,0 +1,78 @@
+@import 'responsive'
+
+.similar
+	margin-bottom: 68px
+	+media(sm)
+		margin-bottom: 45px
+
+	&__holder
+		position: relative
+		.swiper-pagination
+			position: static
+			margin-top: 22px	
+
+	&__title	
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		padding-bottom: 20px
+		font-weight: 700
+
+
+	.product__pic
+		margin-top: 50px
+
+	.product__wrap
+		display: block
+		margin: 0px
+
+	.product__item	
+		width: 100%
+		margin: 0px
+		&:hover
+			box-shadow: 0 0 10px -5px rgba(0,0,0,.2)
+			border-radius: 15px
+
+	&__wrap
+		//overflow: initial
+		//overflow-x: hidden
+		.swiper-slide
+			padding: 10px
+			+media(xs)
+				padding: 0px
+
+	.product__block
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__btn	
+		cursor: pointer
+		display: block
+		width: 62px
+		height: 62px
+		outline: none
+		background-color: #fff
+		border-radius: 15px
+		border: 1px solid #3453f3
+		+media(mdx)
+			width: 50px	
+			height: 50px	
+			border-radius: 12px
+		+media(sm)
+			width: 40px	
+			height: 40px	
+			border-radius: 10px
+		&:hover 
+			border-color: #253db3
+			transition: 0.25s border
+			.similar__icon
+				fill: #253db3
+				transition: 0.25s fill
+
+	&__icon
+		width: 20px
+		height: 20px
+		fill: #3453f3
+

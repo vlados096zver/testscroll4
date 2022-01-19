@@ -1,0 +1,119 @@
+@import 'responsive'
+
+.js-complect,
+.js-other
+	display: none
+
+.buy
+	background-color: #f7fafc
+	border-radius: 25px
+	padding: 20px	
+	padding-bottom: 5px
+	margin-bottom: 24px	
+	+media(sm)
+		margin-bottom: 14px	
+	.select__wrap
+		max-width: 170px
+		min-width: 170px
+
+	.select__wrap--inner .select__placeholder
+		padding: 12px 10px
+
+	&__title
+		font-size: 16px	
+		line-height: 1.2	
+		color: #002638
+		text-transform: uppercase	
+		text-align: center
+		padding-bottom: 20px
+
+	&__box
+		display: flex	
+		justify-content: space-between
+		align-items: center
+		padding-top: 1px
+		padding-bottom: 3px
+		+media(sm)
+			flex-wrap: wrap
+			padding-bottom: 15px
+		&:not(:first-child)
+			padding: 13px 0
+		&:not(:last-child)
+			border-bottom: 1px solid #e9e8f4
+
+	&__block
+		max-width: 270px
+		width: 100%
+		display: flex	
+		align-items: center
+		justify-content: space-between
+		+media(sm)
+			max-width: 100%
+			margin-bottom: 14px
+
+	&__subtitle
+		font-size: 16px	
+		line-height: 1.2	
+		color: #002638
+		padding-right: 20px
+		font-weight: 500	
+
+	&__price
+		flex-grow: 1
+		font-size: 14px	
+		line-height: 1.2	
+		color: #79778a
+		text-align: center
+		padding-right: 24px
+		font-weight: 500	
+		+media(sm)
+			text-align: left
+			padding-right: 15px
+		span
+			display: inline-block
+			background-image: url(../img/icons/decor/icon-info.svg)
+			background-size: 13px
+			background-repeat: no-repeat
+			background-position: right center
+			padding-right: 24px
+
+	&__btn
+		display: block
+		width: 84px
+		cursor: pointer
+		position: relative
+		font-size: 15px
+		line-height: 1.2
+		letter-spacing: 0.15px
+		color: #3453f3
+		border: none
+		outline: none
+		background-color: transparent
+		padding: 0px
+		padding-right: 30px
+		margin-left: auto
+		font-style: normal
+		font-family: TTNorms	
+		&:after
+			position: absolute
+			content: ' '
+			right: 0px
+			top: 50%
+			transform: translateY(-50%)
+			width: 14px
+			height: 14px
+			background-image: url(../img/icons/decor/plus.svg)
+			background-repeat: no-repeat
+			background-size: 14px  14px
+			background-position: right center
+
+		&--check
+			color: #00ab78
+			&:after
+				width: 16px
+				height: 12px
+				filter: invert(51%) sepia(30%) saturate(6238%) hue-rotate(133deg) brightness(92%) contrast(101%)
+				background-image: url(../img/icons/decor/check.svg)
+				background-repeat: no-repeat
+				background-size: 16px  12px
+				background-position: right center

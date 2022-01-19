@@ -1,0 +1,178 @@
+@import 'responsive'
+
+.thank
+	padding-top: 24px
+	margin-bottom: 86px
+	+media(sm)
+		margin-bottom: 52px	
+
+	&__bg
+		position: relative
+		margin-bottom: 74px
+		+media(sm)
+			margin-bottom: 50px
+
+	&__image
+		img
+			display: block
+			width: 100%
+			border-radius: 25px 25px 0px 0px
+			margin: 0 auto
+
+	&__decor
+		position: absolute
+		left: 50%
+		bottom: -37px
+		transform: translateX(-50%)
+		width: 74px
+		height: 74px
+		border-radius: 50%
+		background-color: #fff
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 28px
+			height: 22px	
+			background-image: url(../img/icons/decor/check.svg)
+			background-repeat: no-repeat
+			background-size: 28px 22px
+			filter: invert(28%) sepia(88%) saturate(1646%) hue-rotate(217deg) brightness(96%) contrast(101%)
+
+	&__title
+		font-size: 36px	
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		padding-bottom: 32px
+		font-weight: 700
+		+media(sm)
+			padding-bottom: 28px
+
+	&__text
+		padding-bottom: 42px	
+		+media(sm)
+			padding-bottom: 30px
+		p
+			font-size: 18px
+			line-height: 1.2
+			color: #3453f3
+			text-align: center
+			font-weight: 700
+
+	&__desc
+		font-size: 16px
+		line-height: 1.22
+		color: #79778a
+		text-align: center
+		padding-bottom: 50px
+		+media(sm)
+			padding-bottom: 30px
+
+	&__holder
+		max-width: 530px
+		width: 100%
+		background-color: rgba(52, 83, 243, 0.1)
+		border-radius: 25px
+		padding: 0 15px
+		padding-top: 40px
+		margin: 0 auto
+
+	&__box
+		max-width: 332px	
+		width: 100%
+		margin: 0 auto
+
+	&__elem
+		font-size: 16px	
+		line-height: 1.4	
+		color: #002638
+		text-align: center
+		padding-bottom: 25px
+
+	&__wrap
+		display: flex
+		padding-bottom: 12px
+		+media(sm)
+			flex-direction: column
+			align-items: center
+			padding-bottom: 0px
+
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 62px	
+		cursor: pointer
+		width: calc(100% - 62px)	
+		font-size: 12px	
+		line-height: 1.2	
+		color: #fff
+		background-color: #3453f3
+		border: none
+		outline: none
+		border-radius: 15px
+		text-align: left
+		text-transform: uppercase
+		padding: 0px	
+		margin-bottom: 28px	
+		font-weight: 700
+		font-family: TTNorms
+		transition: 0.25s background-color
+		+media(sm)
+			width: 100%	
+			margin-left: 0px	
+		&:hover
+			background-color: #253db3
+
+		svg
+			display: block
+			width: 20px
+			height: 9px
+			fill: #fff
+			margin-left: 10px	
+			transition: 0.25s transform, 0.25s fill
+
+	&__count
+		position: absolute
+		z-index: 5
+		right: -10px
+		top: -10px
+		width: 24px
+		height: 24px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 12px
+		line-height: 1.2
+		color: #fff
+		border-radius: 50%
+		border: 2px solid #fff
+		background-color: #ff002e
+		padding: 5px
+		font-family: Roboto
+		font-weight: 500
+
+	&__link	
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 62px
+		height: 62px
+		background-color: #fff
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 0px	
+		margin-left: 15px
+		margin-bottom: 28px
+		transition: 0.25s background-color	
+		svg
+			display: block	
+			width: 20px	
+			height: 20px	
+			fill: #3453f3
+		&:hover
+			background-color: #fcfbfc

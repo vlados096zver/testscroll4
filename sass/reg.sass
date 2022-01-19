@@ -1,0 +1,366 @@
+@import 'responsive'
+
+.reg
+	margin-top: 18px
+	padding-bottom: 50px	
+	+media(mdx)
+		padding-bottom: 35px	
+	+media(sm)
+		padding-bottom: 25px	
+
+	.user__holder
+		padding-bottom: 16px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		counter-reset: reg_list
+		padding-top: 10px	
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 6px
+
+	&__title
+		position: relative
+		font-size: 16px		
+		line-height: 1.2	
+		padding-left: 20px	
+		padding-right: 40px
+		margin-bottom: 16px
+		font-weight: 700
+		&:after
+			position: absolute
+			left: 0px
+			counter-increment: reg_list
+			content: counter(reg_list)"."
+
+	&__back
+		display: none
+		cursor: pointer
+		background-image: url(../img/icons/decor/edit-point.svg)
+		background-repeat: no-repeat
+		background-size: 14px
+		background-position: left center
+		font-size: 13px
+		line-height: 1.2
+		color: #3453f3
+		background-color: transparent
+		border: none
+		outline: none
+		padding: 2px 0
+		padding-left: 18px
+		margin-bottom: 16px
+		font-weight: 500
+		font-family: TTNorms
+
+	&__item
+		&--aside
+			width: 412px
+			align-self: flex-start
+			background-color: #f7fafc
+			border-radius: 25px
+			+media(lgs)
+				width: 370px
+			+media(lgxs)
+				width: 350px
+			+media(mdx)
+				width: 100%	
+
+		&--content
+			width: calc(100% - 412px)
+			padding-right: 25px	
+			+media(lgs)
+				width: calc(100% - 370px)
+			+media(lgxs)
+				width: calc(100% - 350px)
+			+media(mdx)
+				width: 100%	
+				padding-right: 0px
+
+	
+	&__point
+		border: 1px solid #e9e8f4
+		background-color: #f7fafc
+		border-radius: 25px
+		padding: 24px
+		padding-bottom: 0px
+		margin-bottom: 24px
+		+media(lgxs)
+			padding: 20px 10px
+			padding-bottom: 0px
+			margin-bottom: 10px	
+
+		&--edit
+			background-color: transparent
+
+	&__info
+		display: none
+		padding-bottom: 24px
+
+	&__block
+		font-size: 13px
+		line-height: 1.7
+		color: #002638
+		&:not(:last-child)
+			margin-bottom: 4px
+
+	&__tabs
+		--tab-background: #f7fafc
+		--tab-text-color: #fff8f8
+		--tab-radius: 24px
+		--tab-padding: 20px
+		width: calc(100% + 24px)
+		margin-left: -12px
+		margin-bottom: 16px	
+		+media(lgxs)
+			width: calc(100% + 12px)
+			margin-left: -6px
+			margin-bottom: 16px	
+
+	&__head
+		display: flex
+		flex-wrap: wrap
+		+media(lgxs)
+			display: block	
+
+	&__elem
+		width: 50%
+		padding-top: 12px
+		padding-right: 12px
+		position: relative
+		display: flex
+		align-items: center
+		justify-self: end
+		width: 50%
+		border-radius: var(--tab-radius) var(--tab-radius) 0 0
+		+media(lgxs)
+			width: 100%
+			padding-top: 6px	
+			padding-right: 8px	
+			border-radius: var(--tab-radius)
+
+		&::after, 
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			width: var(--tab-radius)
+			height: var(--tab-radius)
+			+media(lgxs)
+				display: none
+
+		&--active .reg__box
+			border-color: #3453f3
+
+		&.reg__elem--active
+			background-color: var(--tab-background)
+
+		&:not(:first-child)::before
+			right: 100%
+			background: calc(100% + 2px) 100%/var(--tab-radius) var(--tab-radius) radial-gradient(var(--tab-radius) circle at 0 0, transparent calc(100% - 2px), var(--tab-background) calc(100% - 2px)) no-repeat
+
+		&:not(:last-child)::after
+			left: 100%
+			background: calc(100% - 2px) 100%/var(--tab-radius) var(--tab-radius) radial-gradient(var(--tab-radius) circle at 100% 0, transparent calc(100% - 2px), var(--tab-background) calc(100% - 2px)) no-repeat
+
+		&--last
+			+media(lgxs)
+				padding: 0
+				padding-top: 5px	
+				padding-right: 8px
+				border-radius:  var(--tab-radius)  var(--tab-radius) 0 0
+
+			&:not(.reg__elem--active)
+				+media(lgxs)
+					position: relative
+				.reg__box
+					+media(lgxs)
+						//margin-top: 5px
+						//margin-bottom: 0
+						border-radius: var(--tab-radius)
+						box-shadow: 0 0 0 5px #fff
+					&:after
+						display: none
+						content: ''
+						position: absolute
+						z-index: -1
+						top: -24px
+						left: -8px
+						width: 50px
+						height: calc(100% + 16px + 16px + 8px + 8px)
+						background: var(--tab-background)
+						pointer-events: none
+						+media(lgxs)
+							display: block
+
+	&__desc
+		z-index: 2
+		padding: var(--tab-padding) 12px
+		padding-bottom: 16px
+		border-radius: var(--tab-radius)
+		background: var(--tab-background)
+		+media(lgxs)
+			padding: var(--tab-padding) 8px
+		&:first-child
+			border-radius: 0 var(--tab-radius) var(--tab-radius) var(--tab-radius)
+			+media(lgxs)
+				border-radius: var(--tab-radius)
+
+		&:last-child
+			border-radius: var(--tab-radius) 0 var(--tab-radius) var(--tab-radius)
+			+media(lgxs)
+				border-radius: 0 0  var(--tab-radius)  var(--tab-radius)			
+
+	&__box
+		cursor: pointer
+		width: 100%
+		position: relative
+		display: flex
+		align-items: center
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		background-color: #fff
+		margin-left: 12px
+		margin-bottom: 12px
+		+media(lgxs)
+			margin-bottom: 5px
+			margin-left: 8px	
+
+	&__icon
+		display: block
+		width: 38px
+		height: 38px
+		img
+			display: block
+
+	&__content
+		display: block
+		width: calc(100% - 38px)
+		padding-left: 16px
+		padding-right: 45px
+		pointer-events: none
+
+	&__change, 
+	&__time, 
+	&__text
+		display: block
+
+	&__change
+		font-size: 16px
+		line-height: 1.2	
+		color: #002638
+		padding-bottom: 6px	
+		font-weight: 700	
+
+	&__time
+		font-size: 13px	
+		line-height: 1.2	
+		color: #79778a
+		padding-bottom: 5px
+		font-weight: 500
+
+	&__text
+		font-size: 13px
+		line-height: 1.2
+		color: #3453F3
+		text-transform: uppercase
+		font-weight: 700
+
+
+	&__input
+		display: none
+		&:checked + .reg__box 
+			border-color: #3453f3
+			label::after
+				border: 5px solid #3453f3
+
+	&__label
+		cursor: pointer
+		display: flex
+		width: 100%
+		align-items: center
+		padding: 15px 20px
+		padding-right: 8px
+		&::after
+			position: absolute
+			content: ' '
+			top: 50%
+			transform: translateY(-50%)
+			right: 18px
+			width: 18px
+			height: 18px
+			border: 1px solid #e9e8f4
+			border-radius: 20px
+
+	&__next
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 208px
+		width: 100%	
+		font-size: 12px
+		line-height: 1.2
+		color: #ffffff
+		background: #3453f3
+		border: none
+		border-radius: 15px
+		outline: none
+		text-transform: uppercase
+		padding: 23px 10px
+		font-weight: 700
+		font-family: TTNorms
+		&:hover
+			transition: 0.25s background-color
+			background-color: #2841bf
+		span
+			display: block
+			padding-right: 10px
+
+		svg
+			display: block
+			width: 20px
+			height: 20px
+			fill: #fff
+
+	&__grid
+		font-size: 15px	
+		line-height: 1.2	
+		margin-bottom: 10px
+
+	&__user
+		display: block	
+		width: 100%	
+		min-height: 66px	
+		font-size: 13px	
+		line-height: 1.2
+		color: #002638
+		border: 1px solid #e9e8f4
+		background-color: #fff
+		border-radius: 15px
+		outline: none
+		box-shadow: none
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		padding: 22px 20px
+		padding-bottom: 23px	
+		&::placeholder
+			color: #79778a
+
+	&__holder
+		display: flex
+		+media(sm)
+			flex-wrap: wrap
+
+		.reg__grid
+			width: 50%
+			+media(sm)
+				width: 100%
+			&:first-child
+				margin-right: 10px
+				+media(sm)
+					margin-right: 0px

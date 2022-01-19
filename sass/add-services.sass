@@ -1,0 +1,89 @@
+@import 'responsive'
+
+.add-services
+	margin-top: 60px	
+	+media(sm)
+		margin-top: 44px	
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -12px
+		+media(sm)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 2 - 24px)
+		display: flex
+		flex-direction: column
+		background-color: #f7fafc
+		border-radius: 15px
+		padding: 30px 15px
+		margin: 0 12px
+		margin-bottom: 25px
+		+media(sm)
+			width: 100%
+			margin: 0px	
+			margin-bottom: 10px
+
+	&__image
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 95px
+		height: 95px
+		background-color: #ffffff
+		border-radius: 25px
+		margin: 0 auto
+		margin-bottom: 24px
+		img
+			width: 58px
+			height: 58px
+
+	&__title
+		font-size: 18px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		margin-bottom: 25px
+		font-weight: 500
+
+	&__list
+		padding-bottom: 40px
+
+	&__link
+		display: block
+		width: max-content
+		color: #3453f3
+		border-bottom: 1px dashed #3453f3
+		margin: 0 auto
+		margin-bottom: 22px
+		&:hover
+			border-bottom-color: transparent
+			transition: 0.25s border
+
+	&__details
+		display: block
+		max-width: 274px
+		width: 100%
+		font-size: 12px
+		line-height: 1.2
+		color: #fff
+		background-color: #3453f3
+		border-radius: 15px
+		text-transform: uppercase
+		padding: 26px 10px
+		padding-left: 79px
+		margin: 0 auto
+		margin-top: auto
+		font-weight: 700
+		transition: 0.25s background-color
+		span
+			display: inline-block
+			background-image: url(../img/icons/decor/icon-arrow.svg)
+			background-size: 20px 9px
+			background-position: right center
+			background-repeat: no-repeat
+			padding-right: 33px
+
+		&:hover
+			background-color: #253db3

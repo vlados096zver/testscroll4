@@ -1,0 +1,356 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	min-height: 100vh
+	overflow-x: hidden
+	text-size-adjust: none
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	color: #363636
+	background-color: #fff
+	position: relative
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: TTNorms
+
+* 
+	box-sizing: border-box
+
+*::after,
+*::before
+	box-sizing: border-box
+
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	bottom: 0
+	padding: 0
+	white-space: nowrap
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+
+img
+	max-width: 100%
+	height: auto
+
+.svg-about
+	display: none
+
+.wrap
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	transition: 0.25s filter
+	&--active
+		filter: blur(4px)
+
+	&--popup
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			z-index: 3
+			top: 0px
+			left: 0px
+			width: 100%
+			height: 100%
+			background-color: rgba(8, 12, 33, 0.44)
+			+media(sm)
+				display: none
+
+.container
+	max-width: 1334px
+	padding: 0 25px
+	margin: 0 auto
+	+media(sm)
+		padding: 0 8px
+
+.title
+	font-size: 24px
+	line-height: 1.2
+	color: #002638
+	padding-bottom: 24px
+	font-weight: 500
+	+media(sm)
+		font-size: 18px
+		padding-bottom: 15px
+
+.subtitle
+	font-size: 24px
+	line-height: 1.2
+	color: #002638
+	padding-bottom: 24px
+	text-align: center
+	font-weight: 700
+
+.info,
+.similar,
+.reviews
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background-color: #fff
+		margin: 0px
+		transform: translateY(-50%)
+		border: 1px solid #e9e8f4
+		outline: none
+		&:after
+			display: none
+		svg
+			display: block
+			width: 20px
+			height: 9px
+			fill: #3453f3
+			transition: 0.25s transform, 0.25s fill
+
+		&.swiper-button-disabled
+			opacity: 1
+			svg
+				fill: #c3cef8
+
+		&:hover:not(.swiper-button-disabled) 
+			svg
+				transform: translate(5px)
+
+	.swiper-button-next
+		right: -24px
+		+media(sm)
+			right: 10px
+
+	.swiper-button-prev
+		transform: translateY(-50%) scale(-1)
+		left: -24px
+		+media(sm)
+			left: 10px	
+
+.similar
+	.swiper-button-next,
+	.swiper-button-prev
+		+media(sm)
+			display: none
+
+.info
+	.swiper-button-next,
+	.swiper-button-prev
+		+media(sm)
+			top: initial
+			bottom: 40px
+			transform: translateY(0) scale(-1)
+
+	.swiper-button-next
+		+media(sm)
+			transform: translateY(0)
+
+	.swiper-pagination
+		bottom: 16px
+		+media(sm)
+			bottom: 55px
+
+.info,
+.similar
+	.swiper-pagination
+		display: flex
+		justify-content: center
+
+	.swiper-pagination-bullet
+		display: block
+		width: 44px
+		height: 20px
+		background: transparent
+		position: relative
+		border: none
+		border-radius: 2px
+		outline: none
+		opacity: 1
+		+media(sm)
+			width: 15px
+		&:after
+			position: absolute
+			content: ' '
+			top: 50%
+			left: 0px
+			transform: translateY(-50%)
+			width: 100%
+			height: 4px
+			border-radius: 2px
+			background: #c3cef8
+
+.info
+	.swiper-pagination-bullet
+		&.swiper-pagination-bullet-active:after
+			background: #3453f3
+
+.similar
+	.swiper-pagination-bullet
+		&.swiper-pagination-bullet-active:after
+			background: #002638
+
+.reviews,
+.product
+	.swiper-horizontal > 
+		.swiper-scrollbar
+			left: 0px
+			width: 100%
+			height: 2px
+			background-color: #e9e8f4
+			border-radius: 1px
+
+			.swiper-scrollbar-drag
+				background-color: #79778a
+				border-radius: 1px
+
+.advantages--card,
+.brends
+	.swiper-horizontal > 
+		.swiper-scrollbar
+			left: 0px
+			width: 100%
+			height: 2px
+			background-color: #e4e8ee
+			border-radius: 1px
+
+			.swiper-scrollbar-drag
+				background-color: #002638
+				border-radius: 1px
+
+.pagination
+	&__list
+		display: flex	
+		justify-content: center
+		margin-top: 24px	
+		li:not(:last-child)
+			margin-right: 8px	
+
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 13px	
+		line-height: 1.2	
+		width: 34px
+		height: 34px
+		color: #002638
+		border: 1px solid #e9e8f4
+		border-radius: 50%
+		font-weight: 700
+		transform: 0.25s background-color, 0.25s color	
+		&--active
+			background-color: #002638
+			color: #fff
+
+		&:hover:not(.pagination__link--active)
+			background-color: #f2f3f5
+
+		&--next,
+		&--prev
+			position: relative
+			&:after
+				position: absolute
+				content: ' '
+				width: 8px
+				height: 8px
+				border-top: 2px solid #363636
+				border-right: 2px solid #363636
+				transform: rotate(45deg)
+
+		&--prev
+			&:after
+				transform: rotate(45deg) scale(-1)
+
+
+.breadcrumbs
+	&__list
+		display: flex	
+		padding-bottom: 12px
+		+media(sm)
+			padding-top: 5px		
+		li
+			display: block
+			cursor: default
+			font-weight: 500
+			&:not(:last-child)
+				position: relative
+				&:after
+					position: absolute
+					content: ' '
+					top: 50%
+					transform: translateY(-50%) 
+					right: -16px
+					width: 13px
+					height: 8px
+					background-size: 13px 8px
+					background-image: url(../img/icons/decor/bread_icon.svg)
+					background-repeat: no-repeat
+
+			a
+				color: #79778a
+				transition: 0.3s color
+				&:hover
+					color: #3453f3
+
+
+			&:not(:last-child)
+				margin-right: 10px
+
+			&:not(:first-child)
+				margin-left: 10px
+
+		li, a
+			font-size: 14px
+			line-height: 1
+			color: #002638
+
+input.error,
+label.error
+	display: block
+	font-size: 13px
+	color: #ff002e
+
+input.error
+	border-color: #ff002e
+
+label.error
+	padding-top: 8px
+	
+
+.scroll-up
+	position: fixed
+	z-index: 12
+	cursor: pointer
+	right: 30px
+	bottom: 10%
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 50px
+	border: 1px solid #3453f3
+	border-radius: 50%
+	background-color: #fff
+	outline: none
+	padding: 0px
+	+media(mdx)
+		right: 25px
+	+media(sm)
+		right: 8px
+	&:hover
+		background-color: #fcfbfc
+		transition: 0.25s background-color
+
+	svg
+		display: block	
+		width: 20px	
+		height: 20px	
+		fill: #3453f3
+		transform: rotate(-90deg)

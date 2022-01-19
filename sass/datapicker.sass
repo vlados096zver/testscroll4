@@ -1,0 +1,98 @@
+@import 'responsive'
+
+.air-datepicker
+	width: 200px
+	border-radius: 15px
+	border: none
+	box-shadow: 0px 4px 25px rgba(0, 26, 69, 0.2)
+	padding-bottom: 15px	
+	.air-datepicker--pointer
+		display: none	
+		
+	.air-datepicker-cell
+		width: 24px
+		height: 24px	
+		font-size: 12px	
+		border-radius: 50%
+		font-style: normal
+		font-family: TTNorms
+		&.-selected-.-current-,
+		&.air-datepicker-cell.-selected-
+			background-color: #3453f3
+
+	.air-datepicker-cell.-day-.-other-month-,
+	.air-datepicker-cell.-year-.-other-decade-,
+	.air-datepicker-cell.-disabled-
+		color: #cfced7
+
+	.air-datepicker-body--day-names
+		display: none	
+
+	.air-datepicker-nav--title
+		font-size: 12px	
+		color: #002e4a
+		font-style: normal
+		font-family: TTNorms
+		i
+			color: inherit
+		&:hover
+			background-color: transparent
+
+	.air-datepicker-body--cells.-days-
+		grid-auto-rows: 24px
+
+	.air-datepicker-nav
+		min-height: 14px	
+		border: none
+		padding: 15px 16px
+		padding-bottom: 10px
+
+	.air-datepicker--content
+		padding: 3px 8px
+		padding-bottom: 0px	
+
+	.air-datepicker-nav--action
+		position: relative
+		width: 14px
+		height: 14px	
+		background-color: #002e4a
+		border-radius: 50%
+		transition: 0.25s background-color
+		&:hover
+			background-color: #3453f3
+		&:after
+			position: absolute
+			content: ' '
+			left: calc(50% - 1px)
+			top: 50%
+			width: 5px
+			height: 5px
+			border-top: 1px solid #ffffff
+			border-right: 1px solid #ffffff
+			transform: translate(-50%, -50%) rotate(45deg)
+		&[data-action="prev"]
+
+			transform: scale(-1)
+		svg
+			display: none
+
+	.air-datepicker-buttons
+		display: flex	
+		justify-content: flex-end
+		padding-bottom: 8px		
+
+	.air-datepicker--buttons
+		border-top: none
+		padding-top: 10px	
+
+	.air-datepicker-button	
+		height: 25px		
+		font-size: 14px	
+		line-height: 1.2	
+		color: #3453f3
+		font-style: normal
+		font-family: TTNorms		
+		transition: 0.25s color
+		&:hover
+			background-color: transparent
+			color: #2339a6

@@ -1,0 +1,88 @@
+@import 'responsive'
+
+.brends
+	padding-bottom: 25px
+	+media(sm)
+		padding-bottom: 15px
+	&__subtitle
+		font-size: 24px	
+		line-height: 1.2	
+		color: #262832
+		padding-bottom: 46px
+
+	&__elem
+		margin-bottom: 50px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		border-bottom: 1px solid #e4e8ee
+		margin: 0 -12px	
+		padding-bottom: 26px
+		+media(sm)
+			margin: 0 -4px
+			padding-bottom: 38px
+
+	&__item
+		width: calc(100% / 6 - 24px)
+		display: block
+		border-radius: 20px
+		border: 1px solid #e9e8f4
+		padding: 20px 19px
+		margin: 0 12px
+		margin-bottom: 24px
+		+media(mdx)
+			width: calc(100% / 5 - 24px)
+		+media(sm)
+			width: calc(100% / 4 - 8px)
+			padding: 15px
+			margin: 0 4px
+			margin-bottom: 10px
+		+media(smx)
+			width: calc(100% / 3 - 8px)
+		+media(mini)
+			width: calc(100% / 2 - 8px)
+		img
+			display: block
+			width: 100%
+			margin: 0 auto
+		&:hover,
+		&:active
+			transition: 0.25s border
+
+		&:hover	
+			border-color: #3453f3
+
+		&:active
+			border-color: #8798f2
+
+	&__wrapper
+		display: flex
+		align-items: center
+		padding-bottom: 6px
+		li
+			&:not(:last-child)
+				margin-right: 32px
+
+	&__list
+		padding-top: 40px
+		padding-bottom: 6px
+		margin-bottom: 70px
+		+media(sm)
+			padding-top: 5px
+			margin-bottom: 50px
+
+	&__box
+		cursor: pointer
+		display: block
+		font-size: 18px
+		line-height: 1.2
+		color: #3453f3
+		text-transform: uppercase
+		&:active
+			color: #8798f2
+
+		&:hover
+			text-decoration: underline
+
+		

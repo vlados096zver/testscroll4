@@ -1,0 +1,531 @@
+@import 'responsive'
+
+.product
+	position: relative
+	z-index: 2
+	margin-bottom: 52px
+	+media(sm)
+		margin-bottom: 24px	
+	&__list
+		padding-bottom: 6px
+		margin-bottom: 18px
+
+	&__wrapper
+		display: flex
+		align-items: center
+		padding-bottom: 6px
+
+	&__box
+		cursor: pointer
+		font-size: 14px
+		line-height: 1.2
+		color: #002638
+		background-color: #f2f7fa
+		border: 1px solid #e9e8f4
+		border-radius: 10px
+		text-transform: uppercase
+		padding: 7px 20px
+		transition: 0.25s background-color
+
+		&--active
+			color: #1200dc
+			font-weight: 500
+
+		&:not(:last-child)
+			margin-right: 10px
+
+		&:hover:not(.product__box--active)
+			background-color: #e9edf0
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -12px
+		+media(sm)
+			margin: 0 -4px
+
+	&__item
+		width: calc(100% / 4 - 24px)
+		position: relative
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 15px 14px
+		padding-bottom: 0px
+		margin: 0 12px
+		margin-bottom: 24px
+		transition: 0.25s box-shadow
+		+media(mdx)
+			width: calc(100% / 3 - 24px)
+		+media(sm)
+			width: calc(100% / 2 - 8px)
+			padding: 0 8px
+			padding-top: 6px
+			margin: 0 4px
+			margin-bottom: 8px
+		&:hover:not(.product__item--disabled)
+			border-radius: 15px 15px 0 0
+			box-shadow: 0 0 30px -5px rgba(0,0,0,.2)
+			+media(sm)
+				border-radius: 15px
+
+			@media (orientation: portrait)
+				border-radius: 15px
+
+			.product__submenu
+				opacity: 1
+				visibility: visible
+				box-shadow: 0 0 30px -5px rgba(0,0,0,.2)
+				//box-shadow: 0px 30px 30px -5px rgba(0,0,0,.2)
+				+media(sm)
+					box-shadow: none
+
+				@media (orientation: portrait)
+					box-shadow: none
+
+			.product__cart
+				opacity: 1
+				visibility: visible
+
+		&--disabled
+			.product__image--visible
+				opacity: 0.5
+
+			.product__price
+				color: #d9d8e2
+
+	&__cart
+		opacity: 0
+		visibility: hidden
+		cursor: pointer
+		width: 38px	
+		height: 38px	
+		display: flex	
+		justify-content: center
+		align-items: center
+		background-color: #fff
+		outline: none
+		border: none
+		border: 1px solid #e9e8f4
+		padding: 0px
+		border-radius: 10px
+		margin-bottom: 15px
+		transition: 0.25s opacity, 0.25s visibility
+		+media(sm)
+			width: 26px	
+			height: 26px	
+			border-radius: 6px	
+			margin-bottom: 0px	
+		svg
+			display: block	
+			width: 20px	
+			height: 18px	
+			fill: transparent
+			stroke: #3453f3
+			stroke-width: 2px
+			transition: 0.25s fill
+			+media(sm)
+				width: 14px	
+				height: 13px	
+		&--active
+			svg
+				fill: #3453f3
+		&:hover svg
+			//fill: #3453f3
+
+	&__submenu
+		position: absolute
+		left: -1px
+		top: 100%
+		width: calc(100% + 2px)
+		z-index: 2
+		height: auto
+		opacity: 0
+		visibility: hidden
+		padding: 0 15px
+		background-color: #fff
+		border: 1px solid #e9e8f4
+		border-top: none
+		border-radius: 0 0 15px 15px
+		transition: 0.25s opacity, 0.25s visibility
+		+media(sm)
+			padding: 0px
+			position: static
+			opacity: 1
+			visibility: visible
+			border: none
+
+		@media (orientation: portrait)
+			padding: 0px
+			position: static
+			opacity: 1
+			visibility: visible
+			border: none
+
+		&:before
+			position: absolute
+			content: ' '
+			top: -100%
+			z-index: 3
+			left: 1px
+			width: calc(100% - 2px)
+			height: 100%
+			background-color: #fff	
+			+media(sm)
+				display: none
+				border: none
+
+			@media (orientation: portrait)
+				display: none
+				border: none
+
+	&__gallery
+		position: relative 
+		display: flex
+		flex-wrap: wrap
+		+media(sm)
+			justify-content: center
+
+	&__bg,
+	&__load
+		cursor: pointer
+		width: 40px
+		height: 40px	
+		border-radius: 6px
+		border: 1px solid #e9e8f4
+		margin-bottom: 18px
+		+media(lgsm)
+			width: 38px	
+			height: 38px	
+		+media(lgxs)
+			width: 28px
+			height: 28px
+		+media(sm)
+			width: 22px
+			height: 22px
+			margin-bottom: 8px
+		&:not(:last-child)
+			margin-right: 5px	
+		&--active
+			border-color: #3453f3 
+
+	&__bg
+		background-color: var(--color)
+		&--hidden
+			+media(lgm)
+				display: none
+
+	&__load
+		display: flex	
+		align-items: center
+		justify-content: center
+		background: linear-gradient(0deg, #F7FAFC, #F7FAFC)
+
+	&__size
+		display: none
+		margin: 0 -3px
+		+media(sm)
+			justify-content: center
+
+		&--mob
+			display: none
+			font-size: 8px
+			line-height: 1.2
+			color: #002638
+			text-align: center
+			padding-bottom: 7px
+			+media(sm)
+				display: block
+
+		&--active
+			display: flex
+
+	&__col,
+	&__link
+		width: calc(100% / 7 - 6px)
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid #e9e8f4
+		color: #002638
+		border-radius: 8px
+		padding: 6px 5px
+		text-align: center
+		text-transform: uppercase
+		margin: 0 3px
+		margin-bottom: 15px
+		+media(lgs)
+			width: calc(100% / 5 - 6px)
+
+		+media(sm)
+			width: auto
+			font-size: 8px
+			line-height: 1.2	
+			border: none
+			margin-bottom: 0px	
+
+		&--hidden
+			+media(lgs)
+				display: none
+
+	&__col
+		+media(sm)
+			min-height: 22px	
+
+	&__link
+		+media(sm)
+			display: none	
+
+	&__wrap-block
+		position: relative
+
+	&__pic
+		display: block	
+		margin-bottom: 36px
+		+media(sm)
+			margin-bottom: 22px
+
+	&__image
+		display: none
+		opacity: 0
+		visibility: hidden
+		position: relative
+		//top: 0px
+		//height: 0px
+		//padding-bottom: 100%
+		
+		img
+			display: block
+			//position: absolute
+			//top: 0px
+			//top: 50%
+			//left: 50%
+			//transform: translate(-50%, -50%)
+			width: 100%
+			max-width: 272px
+			margin: 0 auto
+			//width: 100%
+			//height: 100%
+			//object-fit: cover
+
+		&--visible
+			display: block
+			opacity: 1
+			visibility: visible
+
+	&__name
+		display: block	
+		position: relative 
+		z-index: 3
+		min-height: 38px
+		font-size: 16px
+		line-height: 1.2
+		color: #002638
+		font-weight: 500
+		+media(sm)			
+			min-height: 28px
+			font-size: 11px	
+
+	&__info
+		display: flex	
+		position: absolute
+		bottom: -27px
+		+media(sm)
+			bottom: -18px
+
+	&__control 
+		font-size: 13px
+		line-height: 1.2	
+		color: #fff
+		border-radius: 6px
+		text-transform: uppercase
+		padding: 2px 5px	
+		+media(sm)
+			font-size: 10px	
+		&:not(:last-child)
+			margin-right: 4px	
+		&--price
+			background-color: #ff002e
+		
+		&--new
+			background-color: #00ab78
+
+		&--hit
+			background-color: #fb9804
+
+
+	&__block
+		position: relative
+		z-index: 6
+		margin-top: 28px
+		margin-bottom: 30px
+		+media(sm)
+			margin-top: 15px
+			margin-bottom: 10px
+
+		&--inner
+			margin-top: 7px
+			+media(sm)
+				margin-top: 5px
+				margin-bottom: 7px
+
+	&__price
+		font-size: 20px
+		line-height: 1.2
+		color: #002638
+		font-weight: 700
+		+media(sm)
+			font-size: 10px
+		span
+			font-size: 24px
+			+media(sm)
+				font-size: 12px
+
+		&--discount
+			color: #ff002e
+
+		&--old
+			font-size: 14.5px
+			text-decoration: line-through
+			color: #79778a
+			font-weight: 500
+			+media(sm)
+				font-size: 8px
+			span
+				font-size: 18px
+				+media(sm)
+					font-size: 12px
+
+	&__btn
+		display: block
+		cursor: pointer
+		width: 100%
+		font-size: 18px	
+		color: #002638
+		background-color: #fff
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 36px 10px
+		font-family: TTNorms
+		font-weight: 500	
+
+		&--active
+			.product__row
+				&:after
+					animation: lds-dual-ring 1.2s linear infinite
+
+	&__row
+		display: inline-block
+		padding-left: 31px	
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			left: 0px
+			width: 21px
+			height: 21px
+			background-image: url(../img/icons/decor/more.svg)
+			background-size: 21px
+			background-repeat: no-repeat
+			background-position: left center
+
+	&__no-available
+		position: absolute
+		bottom: 15px
+		font-size: 14px	
+		line-height: 1.2	
+		color: #79778a
+		font-weight: 500	
+		+media(mini)
+			bottom: 7px
+			font-size: 12px	
+		+media(minismall)
+			font-size: 11px	
+
+	&__notification
+		cursor: pointer
+		background-image: url(../img/icons/decor/notification.svg)
+		background-repeat: no-repeat
+		background-size: 17px 20px
+		background-position: center
+		position: absolute
+		z-index: 6
+		bottom: 15px
+		right: 15px
+		display: block	
+		width: 62px	
+		height: 62px	
+		background-color: #ffffff
+		border: 1px solid #eb7f00
+		border-radius: 15px
+		padding: 0px	
+		+media(sm)
+			width: 40px
+			height: 40px
+			bottom: 8px
+			right: 8px
+		+media(minismall)
+			width: 32px	
+			height: 32px	
+			border-radius: 12px
+			background-size: 14px
+
+	&__delivery
+		position: absolute
+		z-index: 5
+		top: 15px
+		right: 15px
+		max-width: 85px
+		width: 100%	
+		height: 30px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		font-size: 8px	
+		line-height: 1.2	
+		color: #615d8d
+		text-transform: uppercase
+		+media(sm)
+			top: 3px
+			right: 5px
+
+		&:after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			background-image: url(../img/icons/decor/delivery.svg)
+			background-size: 100%
+			background-repeat: no-repeat
+
+		&:before
+			position: absolute
+			content: ''
+			z-index: 3
+			top: 11px
+			left: 6px
+			width: 4px
+			height: 4px
+			background-color: #615d8d
+			border-radius: 5px
+
+		span
+			display: block
+			position: absolute
+			z-index: 2
+			right: 0px
+			color: #615d8d
+			max-width: 65px
+			font-size: 7px
+			line-height: 1.2
+			padding-right: 5px
+			font-weight: 700
+.product,
+.brends
+	.swiper-slide
+		width: auto
+
+@keyframes lds-dual-ring
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)

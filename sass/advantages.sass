@@ -1,0 +1,145 @@
+@import 'responsive'
+
+.swiper-advantages
+	padding-top: 13px
+	.swiper-scrollbar
+		bottom: initial
+		top: 0px
+
+.advantages
+	background-color: rgba(242, 246, 249, 0.59)
+	padding-top: 70px
+	padding-bottom: 35px
+	margin-bottom: 50px
+	+media(mdx)
+		padding: 44px 0
+		margin-bottom: 35px	
+
+	&--find
+		background-color: transparent
+		padding: 0px
+		margin-bottom: 0px	
+		+media(mdx)
+			padding: 0px	
+			margin-bottom: 0px	
+
+		.advantages__item
+			border: none
+			background: #f7fcfc
+			border-radius: 15px
+			margin-bottom: 22px
+			+media(sm)
+				margin-bottom: 12px	
+
+		.advantages__desc p
+			font-size: 18px
+			font-weight: 500	
+
+	&.advantages--card
+		padding: 0px	
+		background-color: transparent
+		margin-bottom: 0px	
+		.swiper-slide
+			height: auto
+			
+		.advantages__wrap
+			margin: 0px
+
+		.advantages__item
+			border: 1px solid #e9e8f4
+			margin: 0px
+			margin-bottom: 28px	
+
+		.advantages__inner
+			flex-direction: column
+
+		.advantages__image
+			width: 90px
+			height: 90px
+			font-size: 24px	
+			line-height: 1.2	
+			color: #3453f3
+			background-color: #f2f6f9
+			box-shadow: 0 0 0 6px #ffffff, 0 0 0 7px #f2f6f9, 0 0 0 13px #ffffff, 0 0 0 14px #f2f6f9
+			font-weight: 700	
+			span
+				display: block	
+				font-size: 18px	
+				padding-left: 5px	
+
+		.advantages__text
+			padding-left: 0px
+
+		.advantages__desc
+			padding-top: 10px	
+			p
+				font-size: 14px	
+				line-height: 1.2	
+				text-align: center
+				font-weight: 700	
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0 -12px
+		+media(mdx)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 4 - 24px)
+		flex-grow: 1
+		border: 2px solid #fff
+		border-radius: 15px
+		padding: 14px 25px
+		padding-right: 20px	
+		margin: 0 12px
+		margin-bottom: 35px
+		+media(mdx)
+			width: 100%
+			margin: 0 auto
+
+		&:not(:last-child)
+			+media(mdx)
+				margin-bottom: 10px
+
+	&__inner
+		display: flex
+		align-items: center
+
+	&__image
+		flex-shrink: 0
+		width: 90px
+		height: 90px
+		display: flex	
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #fff
+		margin: 14px	
+		box-shadow: 0 0 0 6px #f1f6f9, 0 0 0 7px #fff, 0 0 0 13px #f1f6f9, 0 0 0 14px rgba(255, 255, 255, 0.5)
+		position: relative
+		+media(sm)
+			width: 62px
+			height: 62px
+		img
+			display: block
+
+	&__text
+		flex-grow: 1
+		padding-left: 15px	
+
+	&__count
+		font-size: 20px	
+		line-height: 1.2	
+		color: #002638
+		padding-bottom: 15px	
+		font-weight: 500	
+
+	&__desc
+		p
+			font-size: 16px	
+			line-height: 1.18	
+			color: #002638
+			+media(sm)
+				font-size: 14px
